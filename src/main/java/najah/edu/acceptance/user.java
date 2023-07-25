@@ -2,22 +2,28 @@ package najah.edu.acceptance;
 
 import java.util.List;
 
-public class user {
-	
+// user(id, name)
+// tenant (isStudent)
 
+public class User {
+	
 
 private String name;
  private String pass;
  private String type;
 private int id;
+
+//student fields
+// age
+// major
  
  
 	private int logged;
-	public user() {
+	public User() {
 		this.logged=0;
 		}
 
-	public user(String name, String pass, String typee,int id) {
+	public User(String name, String pass, String typee,int id) {
 		this.name = name;
 		this.pass = pass;
 		this.type=typee;
@@ -62,7 +68,7 @@ private int id;
 		public void setLogged(int logged) {
 			this.logged = logged;
 		}
-		public static int getIndex(String name, List<user> users) {
+		public static int getIndex(String name, List<User> users) {
 			int index = -1;
 
 			for (int i = 0; i < users.size(); i++) {
@@ -75,5 +81,19 @@ private int id;
 
 			return index;
 		}
+		public static String getUserName(int id, List<User> users) {
+			String s="";
+
+			for (int i = 0; i < users.size(); i++) {
+
+				if (users.get(i).getId()==id) {
+
+					return users.get(i).getName();
+				}
+			}
+
+			return s;
+		}
+		
 
 }

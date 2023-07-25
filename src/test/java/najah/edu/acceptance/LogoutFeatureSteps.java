@@ -9,8 +9,8 @@ import io.cucumber.java.en.Then;
 
 public class LogoutFeatureSteps {
 
-	user obj1=new user();
-	user obj2=new user();
+	User obj1=new User();
+	User obj2=new User();
 	boolean actual=false;
 	boolean expected=false;
 
