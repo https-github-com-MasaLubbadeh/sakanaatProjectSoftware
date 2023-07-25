@@ -116,7 +116,7 @@ public class tenantViewFeatureSteps {
 	public void thatTheTenantSelectedTheApartmentWithId(Integer int1) {
 		prepareInfo();
 		id=int1;
-		indexactual=apart.getIndex(int1,aprtment);
+		indexactual=apart.getIndexByApartmentID(int1,aprtment);
 		//System.out.println("arrayIndex : "+indexactual);
 	//	System.out.println(aprtment.get(indexactual));	
 

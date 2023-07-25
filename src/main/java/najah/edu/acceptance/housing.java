@@ -1,5 +1,6 @@
 package najah.edu.acceptance;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class housing {
@@ -8,12 +9,10 @@ public class housing {
 	private String location;
 	private int numbersOfFloors;
 	private int numbersOfApartmentInEachFloor;
-	///private apartment t;
+	//private static ArrayList <apartment> apartmentObj;
 
 	public housing(int housingID, String ownerName, String location, int numbersOfFloors,int numbersOfApartmentInEachFloor) {
 		super();
-		//// t =new housing();
-
 		this.housingID = housingID;
 		this.ownerName = ownerName;
 		this.location = location;
@@ -74,12 +73,14 @@ public class housing {
 		for (int i = 0; i < house.size(); i++) {
 
 			if (house.get(i).getHousingID()==id) {
+
 				return i;
 			}
 		}
 
 		return index;
 	}
+	
 	@Override
 	public String toString() {
 		return "housing [housingID=" + housingID + ", ownerName=" + ownerName + ", location=" + location
@@ -87,5 +88,40 @@ public class housing {
 				+ numbersOfApartmentInEachFloor + "]";
 	}
 	
+	public static int getIndexByHousingID(int id, List<housing> housings) {
+		int index = -1;
+
+		for (int i = 0; i < housings.size(); i++) {
+
+			if (housings.get(i).getHousingID()==id) {
+
+				return i;
+			}
+		}
+
+		return index;
+	}
+
+	
+	public static void printNumberOfFloors(List<housing> housings, int housingiD) {
+		System.out.println("\n number of Floors: "+ housings.get(housingiD).getNumbersOfFloors());
+		
+	}
+	public static void printTenantsCount(List<apartment> apartments,List<housing> housings, String ownerName) {
+		int count=0;
+		for(int i=0; i<apartments.size();i++) {
+		int housingIndex=housing.getIndexByHousingID(apartments.get(i).getHousingID(), housings);
+		 if( housings.get( housingIndex).getOwnerName().equalsIgnoreCase(ownerName) ) {
+			if(apartments.get(i).isStudentHousing()) {// each student is a tenant
+				count+=apartments.get(i).getCurrentNumberOfRoommates();
+			}
+	         if(apartments.get(i).isFamilyHousing() && !( apartments.get(i).isAvailabe()) ) { //each family is a tenant
+		    	count++;
+		    }
+		 }
+		}
+		System.out.println("\n number of tenants in this housing: "+count);
+		
+	} 
 
 }
