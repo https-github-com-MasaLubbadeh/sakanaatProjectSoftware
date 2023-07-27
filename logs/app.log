@@ -1,0 +1,633 @@
+ - This is an info message.
+ - This is an error message.
+ - 
+
+ - |Welcome to  Sakankom|
+ - 
+
+ - 
+ - |Enter you username|
+ - |_______________________________________________________________________________________________________________________________|
+ - |Enter you password|
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - |Welcome Back 
+ - press 1. To view available housing 
+ - 
+
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ - 
+
+ -       3. To book housing 
+ - 
+
+ -       4. To sell furniture  
+ - 
+
+ -       5. To view control panel  
+ - 
+
+ -       0. log out 
+ - press 1. To view available housing 
+ - 
+
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ - 
+
+ -       3. To book housing 
+ - 
+
+ -       4. To sell furniture  
+ - 
+
+ -       5. To view control panel  
+ - 
+
+ -       0. log out 
+ - Enter the apartment id you want to view 
+ - |Apartment: 
+ - press 1. To view available housing 
+ - 
+
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ - 
+
+ -       3. To book housing 
+ - 
+
+ -       4. To sell furniture  
+ - 
+
+ -       5. To view control panel  
+ - 
+
+ -       0. log out 
+ - 
+
+ - |Welcome to  Sakankom|
+ - 
+
+ - 
+ - |Enter you username|
+ - |_______________________________________________________________________________________________________________________________|
+ - |Enter you password|
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - |Welcome Back 
+ - press 1. To view available housing 
+ - 
+
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ - 
+
+ -       3. To book housing 
+ - 
+
+ -       4. To sell furniture  
+ - 
+
+ -       5. To view control panel  
+ - 
+
+ -       0. log out 
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true]
+ - 
+
+ - housing [housingID=1, ownerName=jafarHindi, location=Nablus-Rafedia, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true]
+ - 
+
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - press 1. To view available housing 
+ - 
+
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ - 
+
+ -       3. To book housing 
+ - 
+
+ -       4. To sell furniture  
+ - 
+
+ -       5. To view control panel  
+ - 
+
+ -       0. log out 
+ - Enter the apartment id you want to view 
+ - |Apartment: 
+ - press 1. To view available housing 
+ - 
+
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ - 
+
+ -       3. To book housing 
+ - 
+
+ -       4. To sell furniture  
+ - 
+
+ -       5. To view control panel  
+ - 
+
+ -       0. log out 
+ - 
+
+ - |Welcome to  Sakankom|
+ - 
+
+ - 
+ - |Enter you username|
+ - |_______________________________________________________________________________________________________________________________|
+ - |Enter you password|
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - |Welcome Back 
+ - press 1. To view available housing 
+ - 
+
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ - 
+
+ -       3. To book housing 
+ - 
+
+ -       4. To sell furniture  
+ - 
+
+ -       5. To view control panel  
+ - 
+
+ -       0. log out 
+ - Enter the apartment id you want to view 
+ - |Apartment:
+ - press 1. To view available housing 
+ - 
+
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ - 
+
+ -       3. To book housing 
+ - 
+
+ -       4. To sell furniture  
+ - 
+
+ -       5. To view control panel  
+ - 
+
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - |                   Welcome Back 
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - |                   Welcome Back 
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Enter the apartment id you want to view 
+ - |Apartment:
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false]
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - |                   Welcome Back 
+ - Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome BackMasa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Enter the apartment id you want to view 
+ - |Apartment:apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false]        |
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Sorry, you can;t book a student housing unless you are a student
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - 2
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - |!!!!!!!!!!!!!!!!!!!!!!!!!!!!Login faild!!!!!!!!!!!!!!!!!!!!!!!!!!!!|
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - |!!!!!!!!!!!!!!!!!!!!!!!!!!!!Login faild!!!!!!!!!!!!!!!!!!!!!!!!!!!!|
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - |!!!!!!!!!!!!!!!!!!!!!!!!!!!!Login faild!!!!!!!!!!!!!!!!!!!!!!!!!!!!|
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - |!!!!!!!!!!!!!!!!!!!!!!!!!!!!Login faild!!!!!!!!!!!!!!!!!!!!!!!!!!!!|
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - 2
+ - Booked succefully
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - It appears that the house you requested is not in our system,make sure you have the right id and try again
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Sorry, this student housing is full
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+ 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+ 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|

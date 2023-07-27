@@ -2,7 +2,8 @@ package najah.edu.acceptance;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 public class housing {
 	private int housingID;
 	private String ownerName;
@@ -10,6 +11,7 @@ public class housing {
 	private int numbersOfFloors;
 	private int numbersOfApartmentInEachFloor;
 	//private static ArrayList <apartment> apartmentObj;
+    static Logger logger = LogManager.getLogger(apartment.class);
 
 	public housing(int housingID, String ownerName, String location, int numbersOfFloors,int numbersOfApartmentInEachFloor) {
 		super();
@@ -103,11 +105,13 @@ public class housing {
 	}
 
 	
-	public static void printNumberOfFloors(List<housing> housings, int housingiD) {
-		System.out.println("\n number of Floors: "+ housings.get(housingiD).getNumbersOfFloors());
-		
+	public static void printNumberOfFloors(List<housing> housings, int housingID) {
+		int housingIndex=housing.getIndexByHousingID(housingID, housings);
+		logger.info("\n number of Floors: "+ housings.get(housingIndex).getNumbersOfFloors());
+		logger.info( "\n");
 	}
-	public static void printTenantsCount(List<apartment> apartments,List<housing> housings, String ownerName) {
+
+public static void printTenantsCount(List<apartment> apartments,List<housing> housings, String ownerName) {
 		int count=0;
 		for(int i=0; i<apartments.size();i++) {
 		int housingIndex=housing.getIndexByHousingID(apartments.get(i).getHousingID(), housings);
@@ -120,8 +124,11 @@ public class housing {
 		    }
 		 }
 		}
-		System.out.println("\n number of tenants in this housing: "+count);
+	
+		logger.info( "\n number of tenants in this housing: "+count);
+		logger.info("\n");
 		
 	} 
+
 
 }

@@ -71,7 +71,7 @@ public class bookHousing {
 public void theTenantWithIdWantsToBookAFamilyApartmentInHousingIdFloorApartmentIdCapacity(Integer tenantID, Integer housingID, Integer floor, Integer apartmentID, Integer int5) {
     // Write code here that turns the phrase above into concrete actions
     //throw new io.cucumber.java.PendingException();
-	apartmentIndex=apartment.getApartmentID(apartmentID,housingID,apartmantsArray); //static
+	apartmentIndex=apartment.getApartmentIndex(apartmentID,housingID,apartmantsArray); //static
     }
 
     @When("it's family housing")
@@ -106,7 +106,7 @@ public void theTenantWithIdWantsToBookAFamilyApartmentInHousingIdFloorApartmentI
         // Write code here that turns the phrase above into concrete actions
         //throw new io.cucumber.java.PendingException();
     	
-    	apartmentIndex=apartment.getApartmentID(apartmentID,housingID,apartmantsArray); //static
+    	apartmentIndex=apartment.getApartmentIndex(apartmentID,housingID,apartmantsArray); //static
     	//System.out.println(apartmantsArray.size());
 
     	//for(int i=0;i<apartmantsArray.size();i++) {
@@ -157,7 +157,7 @@ public void theTenantWithIdWantsToBookAFamilyApartmentInHousingIdFloorApartmentI
     public void theTenantWithIdWantsToBookAnApartmentInHousingIdFloorApartmentIdCapacity(Integer tenantID, Integer housingID, Integer floor, Integer apartmentID ,Integer int5) {
         // Write code here that turns the phrase above into concrete actions
        // throw new io.cucumber.java.PendingException();
-    	apartmentIndex=apartment.getApartmentID(apartmentID,housingID,apartmantsArray);
+    	apartmentIndex=apartment.getApartmentIndex(apartmentID,housingID,apartmantsArray);
 		//System.out.println(apartmantsArray.size());
 
     	/*for(int i=0;i<apartmantsArray.size();i++) {
@@ -198,7 +198,7 @@ public void theTenantWithIdWantsToBookAFamilyApartmentInHousingIdFloorApartmentI
     public void theTenantWithIdRequestsToBookAnApartmentInHousingIdFloorApartmentIdCapacity(Integer tenantID, Integer housingID, Integer floor, Integer apartmentID ,Integer int5) {
         // Write code here that turns the phrase above into concrete actions
         //throw new io.cucumber.java.PendingException();
-    	apartmentIndex=apartment.getApartmentID(apartmentID,housingID,apartmantsArray);
+    	apartmentIndex=apartment.getApartmentIndex(apartmentID,housingID,apartmantsArray);
     }
 	@When("the housing is student housing")
     	public void theHousingIsStudentHousing() {

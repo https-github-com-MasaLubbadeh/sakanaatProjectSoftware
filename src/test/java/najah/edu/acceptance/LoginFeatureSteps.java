@@ -50,8 +50,8 @@ public class LoginFeatureSteps {
 	@When("password is correct {string}")
 	public void passwordIsCorrect(String string) {
 		prepareinfo();
-		actual=(users.get(User.getIndex(obj.getName(), users)).getPass().toString().equals(string));
-
+		//actual=(users.get(User.getIndex(obj.getName(), users)).getPass().toString().equals(string));
+		actual=MainFunc.loginSuccess(obj.getName(), string, users);
 	}
 
 	@Then("logged in successfully")

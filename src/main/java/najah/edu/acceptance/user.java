@@ -9,6 +9,8 @@ private String type;
 private int id;
 private String phoneNumber;/////////////////////////
 private int logged;
+private int Age;
+private String Major;
 
 	public User() {
 		this.logged=0;
@@ -28,7 +30,32 @@ private int logged;
 		this.id = id;
 		this.phoneNumber = phoneNumber;
 	}
+	public User(String name, String pass, String type, int id, String phoneNumber,String Major,int Age) {
+		super();
+		this.name = name;
+		this.pass = pass;
+		this.type = type;
+		this.id = id;
+		this.phoneNumber = phoneNumber;
+		this.Age=Age;
+		this.Major=Major;
+	}
 	
+	public int getAge() {
+		return Age;
+	}
+
+	public void setAge(int age) {
+		Age = age;
+	}
+
+	public String getMajor() {
+		return Major;
+	}
+
+	public void setMajor(String major) {
+		Major = major;
+	}
 	 public int getId() {
 			return id;
 		}
@@ -114,6 +141,7 @@ private int logged;
 
 			return s;
 		}
+		
 		
 	/*	public static int getTenantsCount(int ownerID, List<user> users, List<housing> housings) {
 			int ownerIndex=user.getIndexByUserID(ownerID, users);

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <!-- Console Appender -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern=" - %msg%n" />
+        </Console>
+
+        <!-- File Appender -->
+        <File name="FileAppender" fileName="logs/app.log">
+            <PatternLayout pattern=" - %msg%n" />
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- Root Logger -->
+        <Root level="DEBUG">
+            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="FileAppender" />
+        </Root>
+    </Loggers>
+</Configuration>

@@ -116,7 +116,7 @@ public class ownerControlPanel {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
 		int chosenApartmentID=int2;
-		chosenApartmentIndex=apartment.getIndexByApartmentID(chosenApartmentID, apartmentsArray);
+		chosenApartmentIndex=apartment.getIndexByApartmentID(chosenApartmentID,chosenHousingID ,apartmentsArray);
 	}
 	
 	@Then("name of the tenant ,communication way,number of bathrooms,number of bedrooms,of this apartment will be given,and if it has a balcony")

@@ -63,7 +63,7 @@ public class tenantViewFeatureSteps {
 	}
 	@Then("the tenant can view the available houses")
 	public void theTenantCanViewTheAvailableHouses() {
-		int id=0;
+		//int id=0;
 		for(int i = 0; i < aprtment.size(); i++) { 
 			if(aprtment.get(i).isAvailabe()==true) {
 
@@ -116,7 +116,7 @@ public class tenantViewFeatureSteps {
 	public void thatTheTenantSelectedTheApartmentWithId(Integer int1) {
 		prepareInfo();
 		id=int1;
-		indexactual=apart.getIndexByApartmentID(int1,aprtment);
+		indexactual=apart.getIndexByApartmentID(int1,10,aprtment);
 		//System.out.println("arrayIndex : "+indexactual);
 	//	System.out.println(aprtment.get(indexactual));	
 
