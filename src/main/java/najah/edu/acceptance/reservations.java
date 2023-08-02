@@ -36,4 +36,8 @@ public class reservations {
 		this.housingID = housingID;
 	}
 
+	@Override
+	public String toString() {
+		return ("( tenant with ID:"+this.tenantID+ " has a reservation in apartment with ID:" +this.apartmentID+ " in housing with ID: "+this.housingID+" ) \n");
+	}
 }

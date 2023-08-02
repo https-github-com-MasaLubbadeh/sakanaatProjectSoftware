@@ -631,3 +631,1690 @@
  - 
  - |                   Enter you username                   |
  - |_______________________________________________________________________________________________________________________________|
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back jafarHindi
+ - press 1. To add new residence 
+            2. To view control panel 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - housing [housingID=1, ownerName=jafarHindi, location=Nablus-Rafedia, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - Enter floor number :
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - Enter apartment id :
+ - 
+
+ - info about the tenant and the apartment: 
+ 
+ name: Raya
+ phone number: 0564879532
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - |!!!!!!!!!!!!!!!!!!!!!!!!!!!!Login faild!!!!!!!!!!!!!!!!!!!!!!!!!!!!|
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - housing [housingID=1, ownerName=jafarHindi, location=Nablus-Rafedia, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Enter the apartment id you want to view 
+ - Enter the house id the apartment is in 
+ - |Apartment:apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]        |
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Booked succefully
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Sorry, you can;t book a student housing unless you are a student
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Sorry, this student housing is full
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Booked succefully
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Booked succefully
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Booked succefully
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+ 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Booked succefully
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Booked succefully
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Sorry, house is already booked
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Booked succefully
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - It appears that the house you requested is not in our system,make sure you have the right id and try again
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - What type is your furniture?
+ - Enter the price for sale
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - What type is your furniture?
+ - Enter the price for sale
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - What type is your furniture?
+ - Enter the price for sale
+ - How long have you had your furniture?
+ - This is how your Advertisement looks like
+ -  My name is Masaand i am selling afor this price, i used it forif you are intrested, you can contact me on this number0599344589
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - What type is your furniture?
+ - Enter the price for sale
+ - How long have you had your furniture?
+ - This is how your Advertisement looks like
+ -  My name is Masaand i am selling achairfor this price, i used it forif you are intrested, you can contact me on this number0599344589
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - What type is your furniture?
+ - Enter the price for sale
+ - How long have you had your furniture?
+ - This is how your Advertisement looks like
+ -  My name is Masa and i am selling a (chair) for this price (100), i used it for one year if you are intrested, you can contact me on this number 0599344589
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - |______________________________________________________________________________________________________________________________|
+ - HelloMasa.Welcome Back
+ - Name: Masa                Phone Number: 0599344589
+ - Status: null
+ - |______________________________________________________________________________________________________________________________|
+ -                   Owner information            
+ - Owner Name: No name available  Phone Number: no phone number available
+ - Rent: 0
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - |______________________________________________________________________________________________________________________________|
+ - HelloMasa.Welcome Back
+ - Name: Masa                Phone Number: 0599344589
+ - Status: null
+ - |______________________________________________________________________________________________________________________________|
+ -                   Owner information            
+ - Owner Name: No name available  Phone Number: no phone number available
+ - Rent: 0
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - |______________________________________________________________________________________________________________________________|
+ - HelloMasa.Welcome Back
+ - Name: Masa                Phone Number: 0599344589
+ - Status: null
+ - |______________________________________________________________________________________________________________________________|
+ -                   Owner information            
+ - Owner Name: No name available  Phone Number: no phone number available
+ - Rent: 0
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - namamamammmmasaMasri
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - |______________________________________________________________________________________________________________________________|
+ - HelloMasa.Welcome Back
+ - Name: Masa                Phone Number: 0599344589
+ - Status: null
+ - |______________________________________________________________________________________________________________________________|
+ -                   Owner information            
+ - Owner Name: No name available  Phone Number: no phone number available
+ - Rent: 0
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - namamamammmmasaMasri
+ - Booked succefully
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - |______________________________________________________________________________________________________________________________|
+ - HelloMasa.Welcome Back
+ - Name: Masa                Phone Number: 0599344589
+ - Status: Student
+ - |______________________________________________________________________________________________________________________________|
+ -                   Owner information            
+ - Owner Name: masaMasri  Phone Number: 0594050064
+ - Rent: 450
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - housing [housingID=1, ownerName=jafarHindi, location=Nablus-Rafedia, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - housing [housingID=1, ownerName=jafarHindi, location=Nablus-Rafedia, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - |______________________________________________________________________________________________________________________________|
+ - HelloMasa.Welcome Back
+ - Name: Masa                Phone Number: 0599344589
+ - Status: null
+ - |______________________________________________________________________________________________________________________________|
+ -                   Owner information            
+ - Owner Name: No name available  Phone Number: no phone number available
+ - Rent: 0
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Booked succefully
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - |______________________________________________________________________________________________________________________________|
+ - HelloMasa.Welcome Back
+ - Name: Masa                Phone Number: 0599344589
+ - Status: Student
+ - |______________________________________________________________________________________________________________________________|
+ -                   Owner information            
+ - Owner Name: masaMasri  Phone Number: 0594050064
+ - Rent: 450
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - |______________________________________________________________________________________________________________________________|
+ - HelloMasa.Welcome Back
+ - Name: Masa                Phone Number: 0599344589
+ - Status: null
+ - |______________________________________________________________________________________________________________________________|
+ -                   Owner information            
+ - Owner Name: No name available  Phone Number: no phone number available
+ - Rent: 0
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Are you a student? (yer or no) 
+ - Enter on what building the apartment you want to book (id) 
+ - Enter on what apartment you want to book (id)
+ - Booked succefully
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - |______________________________________________________________________________________________________________________________|
+ - HelloMasa.Welcome Back
+ - Name: Masa                Phone Number: 0599344589
+ - Status: Student
+ - |______________________________________________________________________________________________________________________________|
+ -                   Owner information            
+ - Owner Name: masaMasri  Phone Number: 0594050064
+ - Rent: 450
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Enter the apartment id you want to view 
+ - Enter the house id the apartment is in 
+ - |Apartment:apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]        |
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Enter the apartment id you want to view 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Housing with id 1is on this location Nablus-Rafedia and have these apartments:
+ - Apartment with this id 1have these information
+ - pictures:
+ - picture for test
+ - picture for test
+ - Price:550
+ - Available Services::air-conditioning
+ - Apartment with this id 2have these information
+ - pictures:
+ - picture for test
+ - picture for test
+ - Price:600
+ - Available Services::air-conditioning
+ - 
+
+ - Housing with id 2is on this location Nablus-beitWazan and have these apartments:
+ - Apartment with this id 1have these information
+ - pictures:
+ - picture for test
+ - picture for test
+ - Price:400
+ - Available Services::air-conditioning
+ - Apartment with this id 2have these information
+ - pictures:
+ - picture for test
+ - picture for test
+ - Price:450
+ - Available Services::air-conditioning
+ - 
+
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - Housing with id 1is on this location Nablus-Rafedia and have these apartments:
+ - Apartment with this id 1 have these information
+ - pictures:
+ - picture for test
+ - picture for test
+ - Price: 550
+ - Available Services:: air-conditioning
+ - 
+
+ - Apartment with this id 2 have these information
+ - pictures:
+ - picture for test
+ - picture for test
+ - Price: 600
+ - Available Services:: air-conditioning
+ - 
+
+ - Housing with id 2is on this location Nablus-beitWazan and have these apartments:
+ - Apartment with this id 1 have these information
+ - pictures:
+ - picture for test
+ - picture for test
+ - Price: 400
+ - Available Services:: air-conditioning
+ - 
+
+ - Apartment with this id 2 have these information
+ - pictures:
+ - picture for test
+ - picture for test
+ - Price: 450
+ - Available Services:: air-conditioning
+ - 
+
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+ 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - |!!!!!!!!!!!!!!!!!!!!!!!!!!!!Login faild!!!!!!!!!!!!!!!!!!!!!!!!!!!!|
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - Admin
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Haya
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+     
+ - 
+
+ - there are no housings in the Waiting List 
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - Admin
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Haya
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+     
+ - 
+
+ - there are no housings in the Waiting List 
+ - 
+
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+     
+ - 
+
+ - ( tenant with ID:2 has a reservation in apartment with ID:1 in housing with ID: 1 ) 
+
+ - 
+
+ - ( tenant with ID:3 has a reservation in apartment with ID:1 in housing with ID: 2 ) 
+
+ - 
+
+ - ( tenant with ID:4 has a reservation in apartment with ID:1 in housing with ID: 2 ) 
+
+ - 
+
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+     
+ - 
+
+ - Modify Housing : Enter ID of the housing : 
+ - 
+
+ - wrong input.No such housing exist 
+ Enter ID of existing housing :  
+ - 
+
+ - wrong input.No such housing exist 
+ Enter ID of existing housing :  
+ - 
+
+ -    press 1. to modify housing owner name 
+              2.  modify housing location 
+              3.  modify housing numbersOfFloors 
+              4.  modify an apartmentin this housing 
+     
+ - 
+
+ - Modify apartment : Enter ID of an apartment in housing2 : 
+ - 
+
+ - wrong input. Enter apartment id that exists :
+ - 
+
+ -    press 1. to modify apartment's availableServices 
+              2.  modify apartment's rent 
+              3.  modify apartment's peopleCapacity 
+              4.  modify apartment's extraInfo  
+              5.  modify apartment's type  
+     
+ - 
+
+ - Modify apartment  1 : Enter the new rent : 
+ - 
+
+ - updated successfuly
+ - 
+
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+     
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - Admin
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Haya
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+              0.  log out  
+     
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - |!!!!!!!!!!!!!!!!!!!!!!!!!!!!Login faild!!!!!!!!!!!!!!!!!!!!!!!!!!!!|
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - Admin
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Haya
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+            0.  log out  
+     
+ - 
+
+ - ( tenant with ID:2 has a reservation in apartment with ID:1 in housing with ID: 1 ) 
+
+ - 
+
+ - ( tenant with ID:3 has a reservation in apartment with ID:1 in housing with ID: 2 ) 
+
+ - 
+
+ - ( tenant with ID:4 has a reservation in apartment with ID:1 in housing with ID: 2 ) 
+
+ - 
+
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+            0.  log out  
+     
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  Enter Information of the new housing :
+ ID:
+ - 
+
+ -  this ID already exists Enter another one :
+ ID:
+ - 
+
+ -  this ID already exists Enter another one :
+ ID:
+ - 
+
+ -  Enter housing Information : numbersOfFloors:
+ - 
+
+ -  Enter housing Information : numbersOfApartmentInEachFloor:
+ - 
+
+ -  Enter housing Information : location:
+ - 
+
+ -  Enter Information of the an apartment in this housing :
+ ID:
+ - 
+
+ -  Enter apartment Information : available servieces:
+ - 
+
+ -  Enter apartment Information : apartment TYPE (Enter s or f):
+ - 
+
+ - wrong input. Enter f or s : 
+ -  Enter apartment Information :  monthly rent:
+ - 
+
+ -  Enter apartment Information : floor number :
+ - 
+
+ - wrong input. there's no such floor in this housing : 
+ -  Enter apartment Information : people capacity :
+ - 
+
+ -  Enter apartment Information : number of rooms  :
+ - 
+
+ -  Enter apartment Information : number of bathrooms :
+ - 
+
+ -  Enter apartment Information : number of balconies :
+ - 
+
+ -  Enter any extra Information :
+ - 
+
+ -  Enter apartment Information : add pictures of this apartment :
+ - 
+
+ -  Enter number of pictures you want to add :
+ - 
+
+ -  Enter the link :
+ - 
+
+ -  Enter the link :
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  you already entered a phone number, do you want to modify it? y/n
+ - 
+
+ - okay.
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  you already entered a phone number, do you want to modify it? y/n
+ - 
+
+ -  Enter contact Information : your phone number :
+ - 
+
+ -  phone number modified successfuly 
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - Admin
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Haya
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+            0.  log out  
+     
+ - 
+
+ - here are the housings(with apartment) in the waithing List : 
+ - housing [housingID=3, ownerName=null, location=jenin, numbersOfFloors=5, numbersOfApartmentInEachFloor=2]
+ - 
+
+ - with this apartment :apartment [apartmentID=1, availableServices=f, type=students, housingID=3, rent=200, floorNum=5, isAvailabe=true, peopleCapacity=2, numberOfBathrooms=1, numberOfRoom=2, numberOfBalconies=1]
+ - 
+
+ - Enter ID of housings which you approve and they'll be added :
+ - 
+
+ - Enter 0 when you are finished :
+ - 
+
+ - housing doesn't exists
+ - 
+
+ - Enter ID of housings which you approve and they'll be added :
+ - 
+
+ - Enter 0 when you are finished :
+ - 
+
+ - housing 3 added successfuly with its apartment
+ - 
+
+ - Enter ID of housings which you approve and they'll be added :
+ - 
+
+ - Enter 0 when you are finished :
+ - 
+
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+            0.  log out  
+     
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - housing [housingID=1, ownerName=jafarHindi, location=Nablus-Rafedia, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - apartment [apartmentID=1, availableServices=f, type=students, housingID=3, rent=200, floorNum=5, isAvailabe=true, peopleCapacity=2, numberOfBathrooms=1, numberOfRoom=2, numberOfBalconies=1]
+ - 
+
+ - housing [housingID=3, ownerName=null, location=jenin, numbersOfFloors=5, numbersOfApartmentInEachFloor=2]
+ - housing [housingID=3, ownerName=null, location=jenin, numbersOfFloors=5, numbersOfApartmentInEachFloor=2]
+ - 
+
+ - apartment [apartmentID=1, availableServices=f, type=students, housingID=3, rent=200, floorNum=5, isAvailabe=true, peopleCapacity=2, numberOfBathrooms=1, numberOfRoom=2, numberOfBalconies=1]
+ - 
+
+ - housing [housingID=3, ownerName=null, location=jenin, numbersOfFloors=5, numbersOfApartmentInEachFloor=2]
+ - housing [housingID=3, ownerName=null, location=jenin, numbersOfFloors=5, numbersOfApartmentInEachFloor=2]
+ - 
+
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - Admin
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Haya
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+            0.  log out  
+     
+ - 
+
+ - there are no housings in the Waiting List 
+ - 
+
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+            0.  log out  
+     
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - wrong input. Enter ID of one of your housings shown above :
+ - 
+
+ - 
+ number of tenants in this housing: 5
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - Enter floor number :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - 
+ apartments on floor 3 : 
+
+ - 
+
+ - Enter apartment id :
+ - 
+
+ - wrong input. Enter apartment id that exists :
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  Enter Information of the new housing :
+ ID:
+ - 
+
+ -  Enter housing Information : numbersOfFloors:
+ - 
+
+ -  Enter housing Information : numbersOfApartmentInEachFloor:
+ - 
+
+ -  Enter housing Information : location:
+ - 
+
+ -  Enter Information of the an apartment in this housing :
+ ID:
+ - 
+
+ -  Enter apartment Information : available servieces:
+ - 
+
+ -  Enter apartment Information : apartment TYPE (Enter s or f):
+ - 
+
+ -  Enter apartment Information :  monthly rent:
+ - 
+
+ -  Enter apartment Information : floor number :
+ - 
+
+ -  Enter apartment Information : people capacity :
+ - 
+
+ -  Enter apartment Information : number of rooms  :
+ - 
+
+ -  Enter apartment Information : number of bathrooms :
+ - 
+
+ -  Enter apartment Information : number of balconies :
+ - 
+
+ -  Enter any extra Information :
+ - 
+
+ -  Enter apartment Information : add pictures of this apartment :
+ - 
+
+ -  Enter number of pictures you want to add :
+ - 
+
+ -  Enter the link :
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - Admin
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Haya
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+            0.  log out  
+     
+ - 
+
+ - here are the housings(with apartment) in the waithing List : 
+ - housing [housingID=4, ownerName=masaMasri, location=my heart, numbersOfFloors=2, numbersOfApartmentInEachFloor=4]
+ - 
+
+ - with this apartment :apartment [apartmentID=1, availableServices=my love, type=family, housingID=4, rent=800, floorNum=1, isAvailabe=true, peopleCapacity=4, numberOfBathrooms=2, numberOfRoom=4, numberOfBalconies=1]
+ - 
+
+ - Enter ID of housings which you approve and they'll be added :
+ - 
+
+ - Enter 0 when you are finished :
+ - 
+
+ - housing 4 added successfuly with its apartment
+ - 
+
+ - Enter ID of housings which you approve and they'll be added :
+ - 
+
+ - Enter 0 when you are finished :
+ - 
+
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+            0.  log out  
+     
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - tenant
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Masa
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - housing [housingID=1, ownerName=jafarHindi, location=Nablus-Rafedia, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - apartment [apartmentID=1, availableServices=my love, type=family, housingID=4, rent=800, floorNum=1, isAvailabe=true, peopleCapacity=4, numberOfBathrooms=2, numberOfRoom=4, numberOfBalconies=1]
+ - 
+
+ - housing [housingID=4, ownerName=masaMasri, location=my heart, numbersOfFloors=2, numbersOfApartmentInEachFloor=4]
+ - 
+
+ - press 1. To view available housing 
+ -       2. To view pictures of housing and know their prices, location, and services available in them 
+ -       3. To book housing 
+ -       4. To sell furniture  
+ -       5. To view control panel  
+ -       0. log out 

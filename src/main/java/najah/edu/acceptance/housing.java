@@ -55,7 +55,7 @@ public class housing {
 	public void setNumbersOfApartmentInEachFloor(int numbersOfApartmentInEachFloor) {
 		this.numbersOfApartmentInEachFloor = numbersOfApartmentInEachFloor;
 	}
-	public  boolean doesExist(int id, List<housing> housing) {
+	public static boolean doesExist(int id, List<housing> housing) {
 		//int index = -1;
 
 		for (int i = 0; i < housing.size(); i++) {

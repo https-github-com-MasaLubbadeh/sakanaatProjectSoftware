@@ -14,6 +14,8 @@ private String Major;
 
 	public User() {
 		this.logged=0;
+		this.name="No name available";
+		this.phoneNumber="no phone number available";
 		}
 
 	public User(String name, String pass, String typee,int id) {

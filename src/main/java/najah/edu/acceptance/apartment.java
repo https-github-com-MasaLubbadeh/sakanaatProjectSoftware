@@ -5,6 +5,8 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 public class apartment {
+
+
 	private int apartmentID;	
 	private String availableServices;
 	private String type;
@@ -16,7 +18,7 @@ public class apartment {
 	private int numberOfBathrooms;
 	private int numberOfRoom;
 	private int numberOfBalconies;
-	
+	private String extraInfo;
 	private int currentNumberOfRoommates;
 	private ArrayList<String> pictures=new ArrayList<String>();
     static Logger logger = LogManager.getLogger(apartment.class);
@@ -54,6 +56,20 @@ public class apartment {
 		this.isAvailabe = isAvailabe;
 		this.peopleCapacity = peopleCapacity;
 		this.currentNumberOfRoommates = currentNumberOfRoommates;
+	}
+	public String getExtraInfo() {
+		return extraInfo;
+	}
+
+	public void setExtraInfo(String extraInfo) {
+		this.extraInfo = extraInfo;
+	}
+	public ArrayList<String> getPictures() {
+		return pictures;
+	}
+
+	public void setPictures(ArrayList<String> pictures) {
+		this.pictures = pictures;
 	}
 
 	public int getApartmentID() {
@@ -228,7 +244,7 @@ public static int getIndexByApartmentID(int apartmentId,int housigID, List<apart
 
 	return index;
 }
-public  boolean doesExist(int id, List<apartment> apartments,int housingID) {
+public static  boolean doesExist(int id, List<apartment> apartments,int housingID) {
 	for (int i = 0; i < apartments.size(); i++) {
 
 		if (apartments.get(i).getApartmentID()==id && apartments.get(i).getHousingID() == housingID) {
