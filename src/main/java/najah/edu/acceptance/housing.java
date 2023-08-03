@@ -1,19 +1,17 @@
 package najah.edu.acceptance;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-public class housing {
+public class Housing {
 	private int housingID;
 	private String ownerName;
 	private String location;
 	private int numbersOfFloors;
 	private int numbersOfApartmentInEachFloor;
-	//private static ArrayList <apartment> apartmentObj;
-    static Logger logger = LogManager.getLogger(apartment.class);
+    static Logger logger = LogManager.getLogger(Housing.class);
 
-	public housing(int housingID, String ownerName, String location, int numbersOfFloors,int numbersOfApartmentInEachFloor) {
+	public Housing(int housingID, String ownerName, String location, int numbersOfFloors,int numbersOfApartmentInEachFloor) {
 		super();
 		this.housingID = housingID;
 		this.ownerName = ownerName;
@@ -21,9 +19,8 @@ public class housing {
 		this.numbersOfFloors = numbersOfFloors;
 		this.numbersOfApartmentInEachFloor = numbersOfApartmentInEachFloor;
 	}
-	public housing() {
+	public Housing() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public int getHousingID() {
 		return housingID;
@@ -55,8 +52,7 @@ public class housing {
 	public void setNumbersOfApartmentInEachFloor(int numbersOfApartmentInEachFloor) {
 		this.numbersOfApartmentInEachFloor = numbersOfApartmentInEachFloor;
 	}
-	public static boolean doesExist(int id, List<housing> housing) {
-		//int index = -1;
+	public static boolean doesExist(int id, List<Housing> housing) {
 
 		for (int i = 0; i < housing.size(); i++) {
 
@@ -69,7 +65,7 @@ public class housing {
 
 		return false;
 	}
-	public static int getIndex(int id, List<housing> house) {
+	public static int getIndex(int id, List<Housing> house) {
 		int index = -1;
 
 		for (int i = 0; i < house.size(); i++) {
@@ -90,7 +86,7 @@ public class housing {
 				+ numbersOfApartmentInEachFloor + "]";
 	}
 	
-	public static int getIndexByHousingID(int id, List<housing> housings) {
+	public static int getIndexByHousingID(int id, List<Housing> housings) {
 		int index = -1;
 
 		for (int i = 0; i < housings.size(); i++) {
@@ -105,27 +101,27 @@ public class housing {
 	}
 
 	
-	public static void printNumberOfFloors(List<housing> housings, int housingID) {
-		int housingIndex=housing.getIndexByHousingID(housingID, housings);
-		logger.info("\n number of Floors: "+ housings.get(housingIndex).getNumbersOfFloors());
+	public static void printNumberOfFloors(List<Housing> housings, int housingID) {
+		int housingIndex=Housing.getIndexByHousingID(housingID, housings);
+		logger.info( String.format("\\n number of Floors: %s", housings.get(housingIndex).getNumbersOfFloors()));
 		logger.info( "\n");
 	}
 
-public static void printTenantsCount(List<apartment> apartments,List<housing> housings, String ownerName) {
+public static void printTenantsCount(List<apartment> apartments,List<Housing> housings, String ownerName) {
 		int count=0;
 		for(int i=0; i<apartments.size();i++) {
-		int housingIndex=housing.getIndexByHousingID(apartments.get(i).getHousingID(), housings);
+		int housingIndex=Housing.getIndexByHousingID(apartments.get(i).getHousingID(), housings);
 		 if( housings.get( housingIndex).getOwnerName().equalsIgnoreCase(ownerName) ) {
-			if(apartments.get(i).isStudentHousing()) {// each student is a tenant
+			if(apartments.get(i).isStudentHousing()) {
 				count+=apartments.get(i).getCurrentNumberOfRoommates();
 			}
-	         if(apartments.get(i).isFamilyHousing() && !( apartments.get(i).isAvailabe()) ) { //each family is a tenant
+	         if(apartments.get(i).isFamilyHousing() && !( apartments.get(i).isAvailabe()) ) { 
 		    	count++;
 		    }
 		 }
 		}
 	
-		logger.info( "\n number of tenants in this housing: "+count);
+		logger.info(String.format("\n number of tenants in this housing: %d", count));
 		logger.info("\n");
 		
 	} 

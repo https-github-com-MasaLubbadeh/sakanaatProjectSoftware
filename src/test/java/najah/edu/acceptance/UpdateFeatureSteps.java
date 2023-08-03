@@ -13,11 +13,11 @@ import io.cucumber.java.en.When;
 
 public class UpdateFeatureSteps {
 	User obj;
-	housing ob;
+	Housing ob;
 	public UpdateFeatureSteps() {
 		super();
 		obj=new User();
-		ob=new housing();
+		ob=new Housing();
 	}
 
 
@@ -27,10 +27,10 @@ public class UpdateFeatureSteps {
 	int indexExpected=0;
 	int id=0;
 
-	housing h3=new housing(5,"makkfsa","ramakfkllah",53,83);
+	Housing h3=new Housing(5,"makkfsa","ramakfkllah",53,83);
 
 	private static ArrayList<User> users = new ArrayList<User>();
-	private static ArrayList<housing> house = new ArrayList<housing>();
+	private static ArrayList<Housing> house = new ArrayList<Housing>();
 
 	///@Before
 	void prepareinfo() {
@@ -40,8 +40,8 @@ public class UpdateFeatureSteps {
 		users.add(tenant);		
 		users.add(admin);
 		users.add(Owner);
-		housing h1=new housing(10,"raya","nablus",3,3);
-		housing h2=new housing(1,"masa","ramallah",3,3);
+		Housing h1=new Housing(10,"raya","nablus",3,3);
+		Housing h2=new Housing(1,"masa","ramallah",3,3);
 		house.add(h1);
 		house.add(h2);
 

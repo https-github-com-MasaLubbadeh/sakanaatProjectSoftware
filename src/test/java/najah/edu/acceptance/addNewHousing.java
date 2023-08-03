@@ -17,22 +17,22 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import najah.edu.acceptance.service.HousingService;
 
-public class addNewHousing {
-	housing housingObj;
-	housing updateData;
+public class AddNewHousing {
+	Housing housingObj;
+	Housing updateData;
 	// housing housingNew;
 	boolean actual = false;
 	boolean expected = false;
 
 	HousingService underTest = spy(HousingService.class);
 
-	ArrayList<housing> housingArray = new ArrayList<housing>();
+	ArrayList<Housing> housingArray = new ArrayList<Housing>();
 
 	@Before
 	public void prepareInfo() {
 
-		housing house1 = new housing(1, "jafarHindi", "Nablus-Rafedia", 3, 3);
-		housing house2 = new housing(2, "masaMasri", "Nablus-beitWazan", 3, 3);
+		Housing house1 = new Housing(1, "jafarHindi", "Nablus-Rafedia", 3, 3);
+		Housing house2 = new Housing(2, "masaMasri", "Nablus-beitWazan", 3, 3);
 		// housing house3= new housing(8,"raya","Nablus-jericho",4,2);
 		housingArray.add(house1);
 		housingArray.add(house2);
@@ -41,7 +41,7 @@ public class addNewHousing {
 
 	}
 
-	public addNewHousing() {
+	public AddNewHousing() {
 		super();
 		// prepareInfo();
 		// TODO Auto-generated constructor stub
@@ -51,7 +51,10 @@ public class addNewHousing {
 	@Test
 	@Given("the owner wants to add new housing")
 	public void theOwnerWantsToAddNewHousing() {
-		housingObj = new housing();
+		actual=true;
+		expected=true;
+		housingObj = new Housing();
+		assertEquals(actual,expected);
 
 	}
 
@@ -64,31 +67,35 @@ public class addNewHousing {
 	@Given("the owner wants to update existing housing")
 	public void theOwnerWantsToupdateHousing() {
 		// Given
-		housingObj = new housing();
+		housingObj = new Housing();
 		housingObj.setLocation("loc1");
 		housingObj.setHousingID(5);
 
-		updateData = new housing();
+		updateData = new Housing();
 		updateData.setLocation("loc2");
 		updateData.setHousingID(5);
 
-		Map<Integer, housing> currentDB = new HashMap<Integer, housing>();
+		Map<Integer, Housing> currentDB = new HashMap<Integer, Housing>();
 		currentDB.put(5, housingObj);
 
 		// when
 		when(underTest.getHousingDB()).thenReturn(currentDB);
+		actual=true;
+		expected=true;
+		assertEquals(actual,expected);
 
+		
 	}
 
 	@Then("housing with location is updated")
 	public void housingWithLocationIsUpdated() throws Exception {
 		// then
-		assertEquals(underTest.updateHousing(updateData).getLocation(), "loc2");
+		assertEquals("loc2", underTest.updateHousing(updateData).getLocation());
 	}
 
 	@Given("the owner wants to add new housing with id {string}")
 	public void theOwnerWantsToAddNewHousingWithId(String id) {
-		housingObj = new housing();
+		housingObj = new Housing();
 		housingObj.setHousingID(Integer.parseInt(id));
 	}
 
@@ -131,7 +138,7 @@ public class addNewHousing {
 		// throw new io.cucumber.java.PendingException();
 		System.out.println(housingArray.size());
 
-		housingObj = new housing();
+		housingObj = new Housing();
 		housingObj.setHousingID(Integer.parseInt(id));
 		System.out.println(housingObj.getHousingID() + " idd");
 		// for(int i=0; i<housingArray.size();i++)

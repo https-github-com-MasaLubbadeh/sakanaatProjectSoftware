@@ -2,14 +2,15 @@ package najah.edu.acceptance.service;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
-import najah.edu.acceptance.housing;
+import najah.edu.acceptance.Housing;
 
 public class HousingService {
 
-	private Map<Integer,housing> housingDB = new HashMap<>();
+	private Map<Integer,Housing> housingDB = new HashMap<>();
 	
-	public housing createHousing(housing entry) {
+	public Housing createHousing(Housing entry) {
 		int newIndex = getHousingDB().size() + 1;
 		entry.setHousingID(newIndex);
 		getHousingDB().put(newIndex, entry);
@@ -17,11 +18,11 @@ public class HousingService {
 	}
 
 	
-	public housing updateHousing(housing entry) throws Exception{
+	public Housing updateHousing(Housing entry) throws NoSuchElementException{
 		if(!getHousingDB().containsKey(entry.getHousingID())) {
-			throw new Exception("ID not found");
+			throw new NoSuchElementException("ID not found");
 		}
-		housing exitingEntry = getHousingDB().get(entry.getHousingID());
+		Housing exitingEntry = getHousingDB().get(entry.getHousingID());
 		// manipulate existing entry by new entry
 		exitingEntry.setLocation(entry.getLocation());
 		// save to DB
@@ -29,7 +30,7 @@ public class HousingService {
 		return entry;
 	}
 	
-	public Map<Integer,housing> getHousingDB() {
+	public Map<Integer,Housing> getHousingDB() {
 		return this.housingDB;
 	}
 

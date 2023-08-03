@@ -35,14 +35,14 @@ public class bookHousing {
     @Before
 	public static void prepareInfo() {
 		
-		housing house1= new housing(1,"jafarHindi","Nablus-Rafedia",3,3);
+		Housing house1= new Housing(1,"jafarHindi","Nablus-Rafedia",3,3);
 		apartment apartment1= new apartment(1,"air-conditioning","family",1,550,1,false,7,5);
 		apartment apartment2= new apartment(2,"air-conditioning","family",1,600,1,true,5,0);
 
 		User tenant1=new User("Raya","12345","tenant",2);
 		reservations reservation1=new reservations(tenant1.getId(),apartment1.getApartmentID());
 		
-		housing house2= new housing(2,"masaMasri","Nablus-beitWazan",3,3);
+		Housing house2= new Housing(2,"masaMasri","Nablus-beitWazan",3,3);
 		apartment apartment3= new apartment(1,"air-conditioning","students",2,400,1,false,3,3);
 		apartment apartment4= new apartment(2,"air-conditioning","students",2,450,1,true,3,0);
 
