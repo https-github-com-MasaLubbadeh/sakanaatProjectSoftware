@@ -1,17 +1,12 @@
 package najah.edu.acceptance;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-///import java.util.logging.Logger;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class MainFunc {
 
-	
-	 ///static Logger logger = Logger.getLogger(Main.class.getSimpleName());
 	static Logger logger = LogManager.getLogger(MainFunc.class);
 
 	
@@ -33,22 +28,17 @@ public class MainFunc {
 		for(int i = 0; i < apartmentsArray.size(); i++) { 
 			if(apartmentsArray.get(i).isAvailabe()==true) {
 				logger.info(apartmentsArray.get(i).toString());
-				//System.out.print(apartmentsArray.get(i));
-				//System.out.println("\n");
 				logger.info( "in");
 
 				for(int j=0;j<housingsArray.size();j++) {
 					if(housingsArray.get(j).getHousingID() == apartmentsArray.get(i).getHousingID()) {
-						//System.out.println(housingsArray.get(j));
 						logger.info(housingsArray.get(j).toString());
 
 					}
 				}
 				logger.info("\n");
 
-				//System.out.println("\n");
 			}
-		///	else System.out.println("no available housees");
 
 		} 
 	}
@@ -75,7 +65,6 @@ public class MainFunc {
 		for(int i = 0; i < housingsArray.size(); i++) { 
 	
 				logger.info("Housing with id "+housingsArray.get(i).getHousingID()+" is on this location "+housingsArray.get(i).getLocation()+" and have these apartments:");
-			//	logger.info( "\n");
 				for(int j=0;j<apartmentsArray.size();j++) {
 					if(housingsArray.get(i).getHousingID() == apartmentsArray.get(j).getHousingID()) {
 						logger.info("Apartment with this id "+apartmentsArray.get(j).getApartmentID()+" have these information");
@@ -97,7 +86,9 @@ public class MainFunc {
 			logger.info(element);
 		}
 	}
-	////////////////////////////////////////////////////////////////////////////////////
+
+	
+	
 	public static ArrayList <housing> returnHousingsToSpecificOwner(ArrayList <housing> housingsArray,String ownerName) {
 		ArrayList <housing> ownerHousings =new ArrayList <housing>(); 
 		for(int i=0; i<housingsArray.size();i++) {
@@ -132,10 +123,16 @@ public class MainFunc {
 		return true;
 	}
 	
-	//////////////////administrator///////////
-	/* 
-	 * modify housing methods
-	 * */
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public static void modifyOwnerName(ArrayList <housing> housingsArray, int housingID,String ownerName) {
 		int index=housing.getIndexByHousingID(housingID, housingsArray);
 		housingsArray.get(index).setOwnerName(ownerName);
@@ -160,10 +157,11 @@ public class MainFunc {
 			logger.info("\n");
 		}
 	}
+
+
 	
-	/* 
-	 * modify apartment methods
-	 * */
+	
+	
 	public static void printWaitingList(ArrayList <housing> housingsArray,ArrayList <apartment> apartmentsArray) {
 		 for(int i=0;i<housingsArray.size();i++) {
 			 logger.info( "here are the housings(with apartment) in the waithing List : ");
