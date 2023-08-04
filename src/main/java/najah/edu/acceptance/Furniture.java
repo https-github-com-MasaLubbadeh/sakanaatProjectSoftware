@@ -2,37 +2,30 @@ package najah.edu.acceptance;
 
 public class Furniture {
 
-
-	private String type;
-	private String tenantName;
+	private TenantProfile tenant;
 	private int price;
 	private String usageTime;
-	private String phoneNumber;
+	private String typee;
+	public TenantProfile getTenant() {
+		return tenant;
+	}
+	public void setTenant(TenantProfile tenant) {
+		this.tenant = tenant;
+	}
+	public String getTypee() {
+		return typee;
+	}
+	public void setTypee(String typee) {
+		this.typee = typee;
+	}
 	public Furniture(String type, String tenantName,String phoneNumber, int price, String usageTime) {
 		super();
-		this.type = type;
-		this.tenantName = tenantName;
+		tenant=new TenantProfile();
+		tenant.setTenantName(tenantName);
+		tenant.setPhoneNumber(phoneNumber);
+		this.typee=type;
 		this.price = price;
 		this.usageTime = usageTime;
-		this.phoneNumber=phoneNumber;
-	}
-	public String getTenantName() {
-		return tenantName;
-	}
-	public void setTenantName(String tenantName) {
-		this.tenantName = tenantName;
-	}
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public int getPrice() {
@@ -50,7 +43,7 @@ public class Furniture {
 
 	@Override
 	public String toString() {
-		return " My name is "+tenantName +" and i am selling a ("+ type + ") for this price ("+  price+"), i used it for " + usageTime
-				+ " if you are intrested, you can contact me on this number "+phoneNumber;
+		return " My name is "+tenant.getTenantName() +" and i am selling a ("+ typee + ") for this price ("+  price+"), i used it for " + usageTime
+				+ " if you are intrested, you can contact me on this number "+tenant.getPhoneNumber();
 	}
 }
