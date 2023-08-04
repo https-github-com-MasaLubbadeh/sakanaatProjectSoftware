@@ -107,7 +107,7 @@ public class Housing {
 		logger.info( "\n");
 	}
 
-public static void printTenantsCount(List<apartment> apartments,List<Housing> housings, String ownerName) {
+public static void printTenantsCount(List<Apartment> apartments,List<Housing> housings, String ownerName) {
 		int count=0;
 		for(int i=0; i<apartments.size();i++) {
 		int housingIndex=Housing.getIndexByHousingID(apartments.get(i).getHousingID(), housings);

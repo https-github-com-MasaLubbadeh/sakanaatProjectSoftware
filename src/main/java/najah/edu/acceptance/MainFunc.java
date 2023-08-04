@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 public class MainFunc {
 
 	static Logger logger = LogManager.getLogger(MainFunc.class);
- final static String st="updated successfuly";
+	static final  String St="updated successfuly";
 	
 	
 	public static boolean loginSuccess(String name,String password ,List<User> users) {
@@ -25,7 +25,7 @@ public class MainFunc {
 		type=users.get(User.getIndex(name, users)).getType();
 		return type;
 	}
-	public static void tenantView(List <apartment>apartmentsArray , List <Housing>housingsArray) {
+	public static void tenantView(List <Apartment>apartmentsArray , List <Housing>housingsArray) {
 		for(int i = 0; i < apartmentsArray.size(); i++) { 
 			if(apartmentsArray.get(i).isAvailabe()) {
 				logger.info(apartmentsArray.get(i).toString());
@@ -41,9 +41,9 @@ public class MainFunc {
 
 		} 
 	}
-	public static apartment viewApartment(int id,int id2,List <apartment>apartmentsArray){
+	public static Apartment viewApartment(int id,int id2,List <Apartment>apartmentsArray){
 		int indexactual;
-		indexactual=apartment.getIndexByApartmentID(id,id2,apartmentsArray);
+		indexactual=Apartment.getIndexByApartmentID(id,id2,apartmentsArray);
 		return apartmentsArray.get(indexactual);
 		
 	}
@@ -60,7 +60,7 @@ public class MainFunc {
 		logger.info(String.format("Rent: %s", obj.getRent()));
 		
 	}
-	public static void printDetails(List <apartment>apartmentsArray , List <Housing>housingsArray) {
+	public static void printDetails(List <Apartment>apartmentsArray , List <Housing>housingsArray) {
 		for(int i = 0; i < housingsArray.size(); i++) { 
 	
 				logger.info(String.format("Housing with id %s  is on this location %s  and have these apartments:", housingsArray.get(i).getHousingID(),housingsArray.get(i).getLocation()));
@@ -69,7 +69,7 @@ public class MainFunc {
 						logger.info(String.format("Apartment with this id %s  have these information", apartmentsArray.get(j).getApartmentID()));
 						logger.info("pictures:");
 						printArrayList(apartmentsArray.get(j).getPictures());
-						logger.info(String.format("Price", apartmentsArray.get(j).getRent()));
+						logger.info(String.format("Price %s", apartmentsArray.get(j).getRent()));
 						logger.info(String.format("Available Services: %s ", apartmentsArray.get(j).getAvailableServices()));
 
 						logger.info("\n");
@@ -134,22 +134,22 @@ public class MainFunc {
 	public static void modifyOwnerName(List <Housing> housingsArray, int housingID,String ownerName) {
 		int index=Housing.getIndexByHousingID(housingID, housingsArray);
 		housingsArray.get(index).setOwnerName(ownerName);
-		logger.info(st);
+		logger.info(St);
 		logger.info( "\n");
 	}
 	public static void modifyLocation(List <Housing> housingsArray, int housingID,String location) {
 		int index=Housing.getIndexByHousingID(housingID, housingsArray);
 		housingsArray.get(index).setLocation(location);
-		logger.info( st);
+		logger.info( St);
 		logger.info( "\n");
 	}
 	public static void modifyNumOfFloors(List <Housing> housingsArray, int housingID,int fNum) {
 		int index=Housing.getIndexByHousingID(housingID, housingsArray);
 		housingsArray.get(index).setNumbersOfFloors(fNum);
-		logger.info(st);
+		logger.info(St);
 		logger.info( "\n");
 	}
-	public static void printReservations(List <reservations> reservationsArray) {
+	public static void printReservations(List <Reservations> reservationsArray) {
 		for(int i=0; i<reservationsArray.size();i++) {
 			logger.info(reservationsArray.get(i).toString());
 			logger.info("\n");
@@ -160,7 +160,7 @@ public class MainFunc {
 	
 	
 	
-	public static void printWaitingList(List <Housing> housingsArray,List <apartment> apartmentsArray) {
+	public static void printWaitingList(List <Housing> housingsArray,List <Apartment> apartmentsArray) {
 		 for(int i=0;i<housingsArray.size();i++) {
 			 logger.info( "here are the housings(with apartment) in the waithing List : ");
 			 logger.info( housingsArray.get(i).toString());
@@ -175,30 +175,30 @@ public class MainFunc {
 			 logger.info( "\n");
 		 }
 	}
-	public static void modifyAvailableServices(List <apartment> apartmentsArray, int apartmentIndex,String services) {
+	public static void modifyAvailableServices(List <Apartment> apartmentsArray, int apartmentIndex,String services) {
 		 apartmentsArray.get(apartmentIndex).setAvailableServices(services);
-		logger.info( st);
+		logger.info( St);
 		logger.info( "\n");
 	}
-	public static void modifyRent(List <apartment> apartmentsArray, int apartmentIndex,int rent) {
+	public static void modifyRent(List <Apartment> apartmentsArray, int apartmentIndex,int rent) {
 		 apartmentsArray.get(apartmentIndex).setRent(rent);
-		logger.info(st);
+		logger.info(St);
 		logger.info( "\n");
 	}
-	public static void modifyPeopleCapacity(List <apartment> apartmentsArray, int apartmentIndex,int number) {
+	public static void modifyPeopleCapacity(List <Apartment> apartmentsArray, int apartmentIndex,int number) {
 		 apartmentsArray.get(apartmentIndex).setPeopleCapacity(number);
-		logger.info( st);
+		logger.info( St);
 		logger.info( "\n");
 	}
-	public static void modifyExtraInfo(List <apartment> apartmentsArray, int apartmentIndex,String info) {
+	public static void modifyExtraInfo(List <Apartment> apartmentsArray, int apartmentIndex,String info) {
 		 apartmentsArray.get(apartmentIndex).setExtraInfo(info);
-		logger.info(st);
+		logger.info(St);
 		logger.info( "\n");
 	}
-	public static void modifyApartmentType(List <apartment> apartmentsArray, int apartmentIndex,String type) {
+	public static void modifyApartmentType(List <Apartment> apartmentsArray, int apartmentIndex,String type) {
 		 if(type.equalsIgnoreCase("s")) apartmentsArray.get(apartmentIndex).setStudentHousing();
 		 else if (type.equalsIgnoreCase("f")) apartmentsArray.get(apartmentIndex).setFamilyHousing();
-		logger.info( st);
+		logger.info( St);
 		logger.info( "\n");
 	}
 	
