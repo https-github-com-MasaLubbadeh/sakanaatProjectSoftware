@@ -11,7 +11,7 @@ public class tenantViewFeatureSteps {
 	
 	User obj;
 	housing house;
-	apartment apart;
+	Apartment apart;
 	boolean actual=false;
 	boolean expected=false;
 	int indexactual=0;
@@ -22,16 +22,16 @@ public class tenantViewFeatureSteps {
 		//this.tenant=new user("Raya","12345","tenant",2);
 		this.obj=new User();
 		this.house=new housing();
-		this.apart=new apartment();		
+		this.apart=new Apartment();		
 	}
-	private static ArrayList<apartment> aprtment = new ArrayList<apartment>();
+	private static ArrayList<Apartment> aprtment = new ArrayList<Apartment>();
 	private static ArrayList<housing> hous = new ArrayList<housing>();
 
 
 	public void prepareInfo() {
-		apartment p1=new apartment(1,"test","student",10,250,5,true);	
-		apartment p2=new apartment(11,"test","family",11,150,6,true);	
-		apartment p3=new apartment(12,"test","student",13,251,5,false);	
+		Apartment p1=new Apartment(1,"test","student",10,250,5,true);	
+		Apartment p2=new Apartment(11,"test","family",11,150,6,true);	
+		Apartment p3=new Apartment(12,"test","student",13,251,5,false);	
 		aprtment.add(p1);
 		aprtment.add(p2);
 		aprtment.add(p3);

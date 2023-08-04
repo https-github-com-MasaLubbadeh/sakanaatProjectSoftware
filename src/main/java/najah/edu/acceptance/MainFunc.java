@@ -29,7 +29,7 @@ public class MainFunc {
 		type=users.get(User.getIndex(Name, users)).getType();
 		return type;
 	}
-	public static void tenantView(ArrayList <apartment>apartmentsArray , ArrayList <housing>housingsArray) {
+	public static void tenantView(ArrayList <Apartment>apartmentsArray , ArrayList <housing>housingsArray) {
 		for(int i = 0; i < apartmentsArray.size(); i++) { 
 			if(apartmentsArray.get(i).isAvailabe()==true) {
 				logger.info(apartmentsArray.get(i).toString());
@@ -52,9 +52,9 @@ public class MainFunc {
 
 		} 
 	}
-	public static apartment viewApartment(int id,int id2,ArrayList <apartment>apartmentsArray){
+	public static Apartment viewApartment(int id,int id2,ArrayList <Apartment>apartmentsArray){
 		int indexactual;
-		apartment a=new apartment();
+		Apartment a=new Apartment();
 		indexactual=a.getIndexByApartmentID(id,id2,apartmentsArray);
 		return apartmentsArray.get(indexactual);
 		
@@ -71,7 +71,7 @@ public class MainFunc {
 		logger.info("Rent: "+obj.getRent());
 		
 	}
-	public static void printDetails(ArrayList <apartment>apartmentsArray , ArrayList <housing>housingsArray) {
+	public static void printDetails(ArrayList <Apartment>apartmentsArray , ArrayList <housing>housingsArray) {
 		for(int i = 0; i < housingsArray.size(); i++) { 
 	
 				logger.info("Housing with id "+housingsArray.get(i).getHousingID()+" is on this location "+housingsArray.get(i).getLocation()+" and have these apartments:");
@@ -92,8 +92,8 @@ public class MainFunc {
 		} 
 		
 	}
-	public static void printArrayList(ArrayList <String>pictures) {
-		for(String element:pictures) {
+	public static void printArrayList(List<String> list) {
+		for(String element:list) {
 			logger.info(element);
 		}
 	}
@@ -154,7 +154,7 @@ public class MainFunc {
 		logger.info( "updated successfuly");
 		logger.info( "\n");
 	}
-	public static void printReservations(ArrayList <reservations> reservationsArray) {
+	public static void printReservations(ArrayList <Reservations> reservationsArray) {
 		for(int i=0; i<reservationsArray.size();i++) {
 			logger.info(reservationsArray.get(i).toString());
 			logger.info("\n");
@@ -164,7 +164,7 @@ public class MainFunc {
 	/* 
 	 * modify apartment methods
 	 * */
-	public static void printWaitingList(ArrayList <housing> housingsArray,ArrayList <apartment> apartmentsArray) {
+	public static void printWaitingList(ArrayList <housing> housingsArray,ArrayList <Apartment> apartmentsArray) {
 		 for(int i=0;i<housingsArray.size();i++) {
 			 logger.info( "here are the housings(with apartment) in the waithing List : ");
 			 logger.info( housingsArray.get(i).toString());
@@ -178,27 +178,27 @@ public class MainFunc {
 			 logger.info( "\n");
 		 }
 	}
-	public static void modifyAvailableServices(ArrayList <apartment> apartmentsArray, int apartmentIndex,String services) {
+	public static void modifyAvailableServices(ArrayList <Apartment> apartmentsArray, int apartmentIndex,String services) {
 		 apartmentsArray.get(apartmentIndex).setAvailableServices(services);
 		logger.info( "updated successfuly");
 		logger.info( "\n");
 	}
-	public static void modifyRent(ArrayList <apartment> apartmentsArray, int apartmentIndex,int rent) {
+	public static void modifyRent(ArrayList <Apartment> apartmentsArray, int apartmentIndex,int rent) {
 		 apartmentsArray.get(apartmentIndex).setRent(rent);
 		logger.info( "updated successfuly");
 		logger.info( "\n");
 	}
-	public static void modifyPeopleCapacity(ArrayList <apartment> apartmentsArray, int apartmentIndex,int number) {
+	public static void modifyPeopleCapacity(ArrayList <Apartment> apartmentsArray, int apartmentIndex,int number) {
 		 apartmentsArray.get(apartmentIndex).setPeopleCapacity(number);
 		logger.info( "updated successfuly");
 		logger.info( "\n");
 	}
-	public static void modifyExtraInfo(ArrayList <apartment> apartmentsArray, int apartmentIndex,String info) {
+	public static void modifyExtraInfo(ArrayList <Apartment> apartmentsArray, int apartmentIndex,String info) {
 		 apartmentsArray.get(apartmentIndex).setExtraInfo(info);
 		logger.info( "updated successfuly");
 		logger.info( "\n");
 	}
-	public static void modifyApartmentType(ArrayList <apartment> apartmentsArray, int apartmentIndex,String type) {
+	public static void modifyApartmentType(ArrayList <Apartment> apartmentsArray, int apartmentIndex,String type) {
 		 if(type.equalsIgnoreCase("s")) apartmentsArray.get(apartmentIndex).setStudentHousing();
 		 else if (type.equalsIgnoreCase("f")) apartmentsArray.get(apartmentIndex).setFamilyHousing();
 		logger.info( "updated successfuly");

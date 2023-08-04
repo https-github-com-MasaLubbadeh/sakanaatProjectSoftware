@@ -11,7 +11,7 @@ public class housing {
 	private int numbersOfFloors;
 	private int numbersOfApartmentInEachFloor;
 	//private static ArrayList <apartment> apartmentObj;
-    static Logger logger = LogManager.getLogger(apartment.class);
+    static Logger logger = LogManager.getLogger(Apartment.class);
 
 	public housing(int housingID, String ownerName, String location, int numbersOfFloors,int numbersOfApartmentInEachFloor) {
 		super();
@@ -111,7 +111,7 @@ public class housing {
 		logger.info( "\n");
 	}
 
-public static void printTenantsCount(List<apartment> apartments,List<housing> housings, String ownerName) {
+public static void printTenantsCount(List<Apartment> apartments,List<housing> housings, String ownerName) {
 		int count=0;
 		for(int i=0; i<apartments.size();i++) {
 		int housingIndex=housing.getIndexByHousingID(apartments.get(i).getHousingID(), housings);

@@ -1,12 +1,12 @@
 package najah.edu.acceptance;
 
-public class reservations {
+public class Reservations {
 	int tenantID;
 	int apartmentID;
 	int housingID;
 	
 	
-	public reservations(int tenantID, int apartmentID) {
+	public Reservations(int tenantID, int apartmentID) {
 		super();
 		this.tenantID = tenantID;
 		this.apartmentID = apartmentID;
@@ -29,7 +29,7 @@ public class reservations {
 	public void setHousingID(int housingID) {
 		this.housingID = housingID;
 	}
-	public reservations(int tenantID, int apartmentID, int housingID) {
+	public Reservations(int tenantID, int apartmentID, int housingID) {
 		super();
 		this.tenantID = tenantID;
 		this.apartmentID = apartmentID;

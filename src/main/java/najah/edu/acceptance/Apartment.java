@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-public class apartment {
+public class Apartment {
 
 
 	private int apartmentID;	
@@ -20,19 +20,18 @@ public class apartment {
 	private int numberOfBalconies;
 	private String extraInfo;
 	private int currentNumberOfRoommates;
-	private ArrayList<String> pictures=new ArrayList<String>();
-    static Logger logger = LogManager.getLogger(apartment.class);
+	private List<String> pictures=new ArrayList<String>();
+    static Logger logger = LogManager.getLogger(Apartment.class);
 
-	public apartment() {
+	public Apartment() {
 		super();
-		this.isAvailabe=true;//default value is that the apartment is available
+		this.isAvailabe=true;/*default value is that the apartment is available*/
 		this.numberOfBathrooms=2;
 		this.numberOfRoom=4;
 		
 	}
 	
-	///apartment a=new apartment();
-	public apartment(int apartmentID, String availableServices, String type, int housingID, int rent, int floorNum,
+	public Apartment(int apartmentID, String availableServices, String type, int housingID, int rent, int floorNum,
 			boolean isAvailabe) {
 		super();
 		this.apartmentID = apartmentID;
@@ -44,19 +43,6 @@ public class apartment {
 		this.isAvailabe = isAvailabe;
 	}
 	
-	public apartment(int apartmentID, String availableServices, String type, int housingID, int rent, int floorNum,
-			boolean isAvailabe, int peopleCapacity, int currentNumberOfRoommates) {
-		super();
-		this.apartmentID = apartmentID;
-		this.availableServices = availableServices;
-		this.type = type;
-		this.housingID = housingID;
-		this.rent = rent;
-		this.floorNum = floorNum;
-		this.isAvailabe = isAvailabe;
-		this.peopleCapacity = peopleCapacity;
-		this.currentNumberOfRoommates = currentNumberOfRoommates;
-	}
 	public String getExtraInfo() {
 		return extraInfo;
 	}
@@ -64,11 +50,11 @@ public class apartment {
 	public void setExtraInfo(String extraInfo) {
 		this.extraInfo = extraInfo;
 	}
-	public ArrayList<String> getPictures() {
+	public List<String> getPictures() {
 		return pictures;
 	}
 
-	public void setPictures(ArrayList<String> pictures) {
+	public void setPictures(List<String> pictures) {
 		this.pictures = pictures;
 	}
 
@@ -154,26 +140,16 @@ public class apartment {
 	}
 	
 	public boolean isFamilyHousing() {
-		if(this.getType().equalsIgnoreCase("family")) 
-			return true;
-	   else 
-		  return false;
+		return (this.getType().equalsIgnoreCase("family"));
 	}
 	public boolean isStudentHousing() {
-		if(this.getType().equalsIgnoreCase("students")) 
-			return true;
-	   else 
-		  return false;
+		return (this.getType().equalsIgnoreCase("students"));
 	}
 	public boolean thereIsSpace() {
-		if(this.getPeopleCapacity()== this.getCurrentNumberOfRoommates()) 
-			return false;
-	   else 
-		  return true;
+		return !(this.getPeopleCapacity()== this.getCurrentNumberOfRoommates());
 	}
 	
-public static int getApartmentIndex(int apartmentID,int housingID ,ArrayList <apartment> apartments) {
-	//apartment apartmentNull= new apartment();
+public static int getApartmentIndex(int apartmentID,int housingID ,List <Apartment> apartments) {
 		
 		for (int i = 0; i < apartments.size(); i++) {
 
@@ -191,18 +167,17 @@ public String toString() {
 			+ isAvailabe +", peopleCapacity="+peopleCapacity +", numberOfBathrooms="+numberOfBathrooms
 			+", numberOfRoom="+numberOfRoom+", numberOfBalconies="+numberOfBalconies+ "]";
 }
-public static int getHouseID(apartment apart) {
-	int hid = apart.getHousingID();
-	return hid;
+public static int getHouseID(Apartment apart) {
+	return apart.getHousingID();
+	
 }
 
 
-public static void printApartmentsOnFloor(List<apartment> apartments,int floorNum, int housingiD) {
-	logger.info( "\n apartments on floor "+floorNum+" : \n");
+public static void printApartmentsOnFloor(List<Apartment> apartments,int floorNum, int housingiD) {
+	logger.info( "%n apartments on floor %d : %n",floorNum);
 	logger.info( "\n");
 	for(int i=0; i<apartments.size();i++) {
 		if(apartments.get(i).getFloorNum()==floorNum && apartments.get(i).getHousingID()==housingiD) {
-			//System.out.println(apartments.get(i).toString());
 			logger.info(apartments.get(i).toString());
 			logger.info( "\n");
 			
@@ -210,29 +185,36 @@ public static void printApartmentsOnFloor(List<apartment> apartments,int floorNu
 	}
 }
 
-public static void printApartmentInfo(apartment apartmentObj,List<reservations> reservationObj,List<User>users ) {
+public static void printApartmentInfo(Apartment apartmentObj,List<Reservations> reservationObj,List<User>users ) {
 	int tenantID=-1;
-    int tenantIDArray [];
-	String tenantInfo="info about the tenant and the apartment: \n ";
+	//String tenantInfo="info about the tenant and the apartment: \n ";
+	StringBuilder tenantInfo = new StringBuilder("info about the tenant and the apartment: %n");
 	for(int i=0; i< reservationObj.size();i++) {
 		if( (reservationObj.get(i).getApartmentID()==apartmentObj.getApartmentID()) && (reservationObj.get(i).getHousingID()== apartmentObj.getHousingID() ) ) {
 			tenantID=reservationObj.get(i).getTenantID();
-			System.out.println("tenantID:"+tenantID);
+			logger.info("tenantID: %d",tenantID);
 			for(int j=0; j< users.size();j++) {
 				if(users.get(j).getId()==tenantID) {
-					tenantInfo+= "\n name: "+users.get(j).getName();
+					/*tenantInfo+= "\n name: "+users.get(j).getName();
 					tenantInfo+= "\n phone number: ";
-					tenantInfo+=users.get(j).getPhoneNumber();
+					tenantInfo+=users.get(j).getPhoneNumber();*/
+					
+					
+					tenantInfo.append("%n name: ");
+					tenantInfo.append(users.get(j).getName());
+					tenantInfo.append("%n phone number: ");
+					tenantInfo.append(users.get(j).getPhoneNumber());
 				}
-			}//for
+			}
 		}
 	}
-	
-	logger.info( tenantInfo+ "\n there are " + apartmentObj.numberOfBathrooms +" bathrooms and " + apartmentObj.numberOfRoom +" rooms and " +apartmentObj.numberOfBalconies +" Balcony");
-	logger.info( "\n");
+	String tenantInfoString=tenantInfo.toString();
+	logger.info(  "%s %n there are %d bathrooms and %d rooms and %d Balcony", tenantInfoString, apartmentObj.numberOfBathrooms 
+			,apartmentObj.numberOfRoom, apartmentObj.numberOfBalconies );
+	logger.info( "%n");
 
 }
-public static int getIndexByApartmentID(int apartmentId,int housigID, List<apartment> apartments) {
+public static int getIndexByApartmentID(int apartmentId,int housigID, List<Apartment> apartments) {
 	int index = -1;
 
 	for (int i = 0; i < apartments.size(); i++) {
@@ -244,7 +226,7 @@ public static int getIndexByApartmentID(int apartmentId,int housigID, List<apart
 
 	return index;
 }
-public static  boolean doesExist(int id, List<apartment> apartments,int housingID) {
+public static  boolean doesExist(int id, List<Apartment> apartments,int housingID) {
 	for (int i = 0; i < apartments.size(); i++) {
 
 		if (apartments.get(i).getApartmentID()==id && apartments.get(i).getHousingID() == housingID) {
