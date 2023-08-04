@@ -10,7 +10,7 @@ import io.cucumber.java.en.Then;
 public class tenantViewFeatureSteps {
 	
 	User obj;
-	housing house;
+	Housing house;
 	apartment apart;
 	boolean actual=false;
 	boolean expected=false;
@@ -21,11 +21,11 @@ public class tenantViewFeatureSteps {
 		super();
 		//this.tenant=new user("Raya","12345","tenant",2);
 		this.obj=new User();
-		this.house=new housing();
+		this.house=new Housing();
 		this.apart=new apartment();		
 	}
 	private static ArrayList<apartment> aprtment = new ArrayList<apartment>();
-	private static ArrayList<housing> hous = new ArrayList<housing>();
+	private static ArrayList<Housing> hous = new ArrayList<Housing>();
 
 
 	public void prepareInfo() {
@@ -35,9 +35,9 @@ public class tenantViewFeatureSteps {
 		aprtment.add(p1);
 		aprtment.add(p2);
 		aprtment.add(p3);
-		housing h1=new housing(10,"raya","nablus",3,3);
-		housing h2=new housing(13,"masa","ramallah",3,3);
-		housing h3=new housing(11,"raya","nablus",3,3);
+		Housing h1=new Housing(10,"raya","nablus",3,3);
+		Housing h2=new Housing(13,"masa","ramallah",3,3);
+		Housing h3=new Housing(11,"raya","nablus",3,3);
 
 		hous.add(h1);
 		hous.add(h2);

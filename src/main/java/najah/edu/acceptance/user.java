@@ -7,7 +7,7 @@ private String name;
 private String pass;
 private String type;
 private int id;
-private String phoneNumber;/////////////////////////
+private String phoneNumber;
 private int logged;
 private int Age;
 private String Major;

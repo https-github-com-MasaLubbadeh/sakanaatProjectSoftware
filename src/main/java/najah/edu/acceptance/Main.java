@@ -1,6 +1,7 @@
 package najah.edu.acceptance;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Handler;
 import java.util.logging.Level;
@@ -15,7 +16,7 @@ public class Main {
 	private static ArrayList <reservations> reservationsArray= new ArrayList<reservations>();
 	private static ArrayList<User> users = new ArrayList<User>();
 	private static ArrayList<apartment> apartmentsArray = new ArrayList<apartment>();
-	private static ArrayList<housing> housingsArray = new ArrayList<housing>();
+	private static List<Housing> housingsArray = new ArrayList<Housing>();
 	private static ArrayList<String> furnitureArray=new ArrayList<String>();
 	private static ArrayList<String> pictures=new ArrayList<String>();
 
@@ -26,7 +27,7 @@ public static void prepareInfo() {
 		pictures.add(ss);
 		pictures.add(ss);
 
-		housing house1= new housing(1,"jafarHindi","Nablus-Rafedia",3,3);
+		Housing house1= new Housing(1,"jafarHindi","Nablus-Rafedia",3,3);
 		apartment apartment1= new apartment(1,"air-conditioning","family",1,550,1,false,7,5);//first foor
 		apartment apartment2= new apartment(2,"air-conditioning","family",1,600,1,true,5,0);//first foor
 		apartment1.setPictures(pictures);
@@ -40,7 +41,7 @@ public static void prepareInfo() {
 		User tenant1=new User("Raya","12345","tenant",2,"0564879532");
 		reservations reservation1=new reservations(tenant1.getId(),apartment1.getApartmentID(),house1.getHousingID());
 		
-		housing house2= new housing(2,"masaMasri","Nablus-beitWazan",3,3);
+		Housing house2= new Housing(2,"masaMasri","Nablus-beitWazan",3,3);
 		apartment apartment3= new apartment(1,"air-conditioning","students",2,400,1,false,3,3);
 		apartment apartment4= new apartment(2,"air-conditioning","students",2,450,1,true,3,2);
 		
@@ -88,19 +89,19 @@ public static void main(String[] args) {
 	boolean success=false;
 	User obj=new User();
 	apartment apart=new apartment();
-	housing house=new housing();
+	Housing house=new Housing();
 	reservations newReservation;
 	Furniture fur;
 	String furType;
 	int price;
 	String usageTime;
 	TenantProfile tenant=new TenantProfile();
-	housing tenantProfile=new housing();
+	Housing tenantProfile=new Housing();
 	User sentObj=new User();
 	Main.prepareInfo();
 	//Logger logger = Logger.getLogger(Main.class.getSimpleName());
     Logger logger = LogManager.getLogger(Main.class);
-    ArrayList<housing> housingsWaitingForApproval = new ArrayList<housing>();
+    ArrayList<Housing> housingsWaitingForApproval = new ArrayList<Housing>();
     ArrayList<apartment> apartmentsWaitingForApproval = new ArrayList<apartment>();
 	/*for(Handler iHandler:logger.getParent().getHandlers())
     {
@@ -266,7 +267,7 @@ input.nextLine();
 if (x == 1) { //add new housing
 
 	ArrayList <String> pics= new ArrayList<String>();
-	housing newHousing=new housing();
+	Housing newHousing=new Housing();
 	logger.info( " Enter Information of the new housing :\n ID:");
 	logger.info( "\n");
 	int housingID = input.nextInt();
@@ -418,7 +419,7 @@ if (x == 1) { //add new housing
 	}
 
  else if (x == 2) { //show owner control panel
-	 ArrayList <housing> returnedArray= new  ArrayList <housing>();
+	 List <Housing> returnedArray= new  ArrayList <Housing>();
 	    logger.info( " here are your housings:");
 	    //MainFunc.printHousingsToSpecificOwner(housingsArray,loggedinUser.getName());
 	    returnedArray=MainFunc.returnHousingsToSpecificOwner(housingsArray, name);
@@ -436,8 +437,8 @@ if (x == 1) { //add new housing
 		   input.nextLine();
        }
 		
-		housing.printTenantsCount(apartmentsArray,housingsArray,name);
-		housing.printNumberOfFloors(housingsArray, chosenHousingID);
+		Housing.printTenantsCount(apartmentsArray,housingsArray,name);
+		Housing.printNumberOfFloors(housingsArray, chosenHousingID);
 		
 		logger.info( "Enter floor number :");
 		logger.info( "\n");
@@ -452,7 +453,7 @@ if (x == 1) { //add new housing
 			   input.nextLine();
 	       }
 		
-		int chosenHousingIndex= housing.getIndexByHousingID(chosenHousingID, housingsArray);
+		int chosenHousingIndex= Housing.getIndexByHousingID(chosenHousingID, housingsArray);
 
 		apartment.printApartmentsOnFloor(apartmentsArray,floorNum,chosenHousingID);
 		
@@ -536,7 +537,7 @@ if (x == 1) { //add new housing
 		         if(x==0) break;
 		         
 		         else if(  MainFunc.checkEnteredHousingID(housingsWaitingForApproval, x)) {
-				  int index= housing.getIndexByHousingID(x, housingsWaitingForApproval);
+				  int index= Housing.getIndexByHousingID(x, housingsWaitingForApproval);
 				  housingsArray.add(housingsWaitingForApproval.get(index));
 				  apartmentsArray.add(apartmentsWaitingForApproval.get(index));
 				  logger.info( "housing "+x+" added successfuly with its apartment");
@@ -554,7 +555,7 @@ if (x == 1) { //add new housing
 			 logger.info( "\n");
 			int housingID = input.nextInt();
 	         input.nextLine();
-	        while(! housing.doesExist(housingID, housingsArray)) {
+	        while(! Housing.doesExist(housingID, housingsArray)) {
 	        	 logger.info( "wrong input.No such housing exist \n Enter ID of existing housing :  ");
 				 logger.info( "\n");
 				 housingID = input.nextInt();
