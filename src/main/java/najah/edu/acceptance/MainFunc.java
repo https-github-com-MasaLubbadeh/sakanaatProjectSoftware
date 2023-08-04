@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 public class MainFunc {
 
 	static Logger logger = LogManager.getLogger(MainFunc.class);
-	static final  String St="updated successfuly";
+	static final  String ST="updated successfuly";
 	
 	
 	public static boolean loginSuccess(String name,String password ,List<User> users) {
@@ -50,7 +50,10 @@ public class MainFunc {
 
 	public static void printControlPanel(TenantProfile obj) {
 		logger.info("|______________________________________________________________________________________________________________________________|");
-		logger.info(String.format("Hello %s  .Welcome Back", obj.getTenantName()));
+		if (obj.getTenantName() != null) {
+		    logger.info(String.format("Hello %s . Welcome Back", obj.getTenantName()));
+		}
+
 		logger.info(String.format("Name: %s                   PhoneNumber: %s",obj.getTenantName(),obj.getPhoneNumber()));
 		logger.info("");
 		logger.info(String.format("Status: %s", obj.getType()));
@@ -134,19 +137,19 @@ public class MainFunc {
 	public static void modifyOwnerName(List <Housing> housingsArray, int housingID,String ownerName) {
 		int index=Housing.getIndexByHousingID(housingID, housingsArray);
 		housingsArray.get(index).setOwnerName(ownerName);
-		logger.info(St);
+		logger.info(ST);
 		logger.info( "\n");
 	}
 	public static void modifyLocation(List <Housing> housingsArray, int housingID,String location) {
 		int index=Housing.getIndexByHousingID(housingID, housingsArray);
 		housingsArray.get(index).setLocation(location);
-		logger.info( St);
+		logger.info( ST);
 		logger.info( "\n");
 	}
 	public static void modifyNumOfFloors(List <Housing> housingsArray, int housingID,int fNum) {
 		int index=Housing.getIndexByHousingID(housingID, housingsArray);
 		housingsArray.get(index).setNumbersOfFloors(fNum);
-		logger.info(St);
+		logger.info(ST);
 		logger.info( "\n");
 	}
 	public static void printReservations(List <Reservations> reservationsArray) {
@@ -177,28 +180,28 @@ public class MainFunc {
 	}
 	public static void modifyAvailableServices(List <Apartment> apartmentsArray, int apartmentIndex,String services) {
 		 apartmentsArray.get(apartmentIndex).setAvailableServices(services);
-		logger.info( St);
+		logger.info( ST);
 		logger.info( "\n");
 	}
 	public static void modifyRent(List <Apartment> apartmentsArray, int apartmentIndex,int rent) {
 		 apartmentsArray.get(apartmentIndex).setRent(rent);
-		logger.info(St);
+		logger.info(ST);
 		logger.info( "\n");
 	}
 	public static void modifyPeopleCapacity(List <Apartment> apartmentsArray, int apartmentIndex,int number) {
 		 apartmentsArray.get(apartmentIndex).setPeopleCapacity(number);
-		logger.info( St);
+		logger.info( ST);
 		logger.info( "\n");
 	}
 	public static void modifyExtraInfo(List <Apartment> apartmentsArray, int apartmentIndex,String info) {
 		 apartmentsArray.get(apartmentIndex).setExtraInfo(info);
-		logger.info(St);
+		logger.info(ST);
 		logger.info( "\n");
 	}
 	public static void modifyApartmentType(List <Apartment> apartmentsArray, int apartmentIndex,String type) {
 		 if(type.equalsIgnoreCase("s")) apartmentsArray.get(apartmentIndex).setStudentHousing();
 		 else if (type.equalsIgnoreCase("f")) apartmentsArray.get(apartmentIndex).setFamilyHousing();
-		logger.info( St);
+		logger.info( ST);
 		logger.info( "\n");
 	}
 	
