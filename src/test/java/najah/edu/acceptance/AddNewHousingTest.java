@@ -17,7 +17,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import najah.edu.acceptance.service.HousingService;
 
-public class AddNewHousing {
+public class AddNewHousingTest {
 	Housing housingObj;
 	Housing updateData;
 	// housing housingNew;
@@ -41,7 +41,7 @@ public class AddNewHousing {
 
 	}
 
-	public AddNewHousing() {
+	public AddNewHousingTest() {
 		super();
 		// prepareInfo();
 		// TODO Auto-generated constructor stub

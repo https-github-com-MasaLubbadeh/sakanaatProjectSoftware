@@ -9,8 +9,8 @@ private String type;
 private int id;
 private String phoneNumber;
 private int logged;
-private int Age;
-private String Major;
+private int age;
+private String major;
 
 	public User() {
 		this.logged=0;
@@ -32,31 +32,31 @@ private String Major;
 		this.id = id;
 		this.phoneNumber = phoneNumber;
 	}
-	public User(String name, String pass, String type, int id, String phoneNumber,String Major,int Age) {
+	public User(String name, String pass, String type, int id, String phoneNumber,String major,int age) {
 		super();
 		this.name = name;
 		this.pass = pass;
 		this.type = type;
 		this.id = id;
 		this.phoneNumber = phoneNumber;
-		this.Age=Age;
-		this.Major=Major;
+		this.age=age;
+		this.major=major;
 	}
 	
 	public int getAge() {
-		return Age;
+		return age;
 	}
 
 	public void setAge(int age) {
-		Age = age;
+		this.age = age;
 	}
 
 	public String getMajor() {
-		return Major;
+		return major;
 	}
 
 	public void setMajor(String major) {
-		Major = major;
+		this.major = major;
 	}
 	 public int getId() {
 			return id;
@@ -144,18 +144,4 @@ private String Major;
 			return s;
 		}
 		
-		
-	/*	public static int getTenantsCount(int ownerID, List<user> users, List<housing> housings) {
-			int ownerIndex=user.getIndexByUserID(ownerID, users);
-			String ownerName=users.get(ownerIndex).getName();
-			int count=0;
-			for(int i=0; i<housings.size();i++) {
-				if (housings.get(i).getOwnerName().equalsIgnoreCase(ownerName)) {
-					if(housings.get(i).getT)
-				}
-			}
-			return -1;
-			
-		} */
-
 }

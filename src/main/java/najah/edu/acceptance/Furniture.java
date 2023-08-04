@@ -21,6 +21,8 @@ public class Furniture {
 	public Furniture(String type, String tenantName,String phoneNumber, int price, String usageTime) {
 		super();
 		tenant=new TenantProfile();
+
+		
 		tenant.setTenantName(tenantName);
 		tenant.setPhoneNumber(phoneNumber);
 		this.typee=type;

@@ -13,9 +13,9 @@ import org.apache.logging.log4j.Logger;
 
 
 public class Main {
-	private static ArrayList <reservations> reservationsArray= new ArrayList<reservations>();
+	private static ArrayList <Reservations> reservationsArray= new ArrayList<Reservations>();
 	private static ArrayList<User> users = new ArrayList<User>();
-	private static ArrayList<apartment> apartmentsArray = new ArrayList<apartment>();
+	private static ArrayList<Apartment> apartmentsArray = new ArrayList<Apartment>();
 	private static List<Housing> housingsArray = new ArrayList<Housing>();
 	private static ArrayList<String> furnitureArray=new ArrayList<String>();
 	private static ArrayList<String> pictures=new ArrayList<String>();
@@ -23,38 +23,51 @@ public class Main {
 
 
 public static void prepareInfo() {
+	final String airCondition = "air-conditioning";
+	final String pass = "12345";
+	final String owner = "owner";
+	final String tenant = "tenant";
+
 		String ss="picture for test";
 		pictures.add(ss);
 		pictures.add(ss);
 
 		Housing house1= new Housing(1,"jafarHindi","Nablus-Rafedia",3,3);
-		apartment apartment1= new apartment(1,"air-conditioning","family",1,550,1,false,7,5);//first foor
-		apartment apartment2= new apartment(2,"air-conditioning","family",1,600,1,true,5,0);//first foor
+		Apartment apartment1= new Apartment(1,airCondition,"family",1,550,1,false);//first foor
+		Apartment apartment2= new Apartment(2,airCondition,"family",1,600,1,true);//first foor
+		apartment1.setPeopleCapacity(7);
+		apartment1.setCurrentNumberOfRoommates(5);
 		apartment1.setPictures(pictures);
 		apartment2.setNumberOfBalconies(2);
 		apartment2.setNumberOfBathrooms(2);
 		apartment2.setNumberOfRoom(3);
 		apartment2.setPictures(pictures);
+		apartment2.setPeopleCapacity(5);
+		apartment2.setCurrentNumberOfRoommates(0);
 
-		User ownerr=new User("masaMasri","12345","owner",9,"0594050064");
-		User owner1=new User("jafarHindi","12345","owner",1,"0555898745");
-		User tenant1=new User("Raya","12345","tenant",2,"0564879532");
-		reservations reservation1=new reservations(tenant1.getId(),apartment1.getApartmentID(),house1.getHousingID());
+		User ownerr=new User("masaMasri",pass,owner,9,"0594050064");
+		User owner1=new User("jafarHindi",pass,owner,1,"0555898745");
+		User tenant1=new User("Raya",pass,tenant,2,"0564879532");
+		Reservations reservation1=new Reservations(tenant1.getId(),apartment1.getApartmentID(),house1.getHousingID());
 		
 		Housing house2= new Housing(2,"masaMasri","Nablus-beitWazan",3,3);
-		apartment apartment3= new apartment(1,"air-conditioning","students",2,400,1,false,3,3);
-		apartment apartment4= new apartment(2,"air-conditioning","students",2,450,1,true,3,2);
+		Apartment apartment3= new Apartment(1,airCondition,"students",2,400,1,false);
+		Apartment apartment4= new Apartment(2,airCondition,"students",2,450,1,true);
 		
 		apartment3.setPictures(pictures);
+		apartment3.setPeopleCapacity(3);
+		apartment3.setCurrentNumberOfRoommates(3);
+		
 		apartment4.setPictures(pictures);
+		apartment4.setPeopleCapacity(3);
+		apartment4.setCurrentNumberOfRoommates(2);
+		
+		User tenant2=new User("Masa",pass,tenant,3,"0599344589");
+		Reservations reservation2=new Reservations(tenant2.getId(),apartment3.getApartmentID(),house2.getHousingID());
 
-		User tenant2=new User("Masa","12345","tenant",3,"0599344589");
-		reservations reservation2=new reservations(tenant2.getId(),apartment3.getApartmentID(),house2.getHousingID());
-
-		User tenant3=new User("Hiba","12345","tenant",4,"0599344589");
-		reservations reservation3=new reservations(tenant3.getId(),apartment3.getApartmentID(),house2.getHousingID());
-		User admin=new User("Haya","12345","Admin",1);
-		//user tenant2=new user("Tamara","12346","Owner",3);
+		User tenant3=new User("Hiba",pass,tenant,4,"0599344589");
+		Reservations reservation3=new Reservations(tenant3.getId(),apartment3.getApartmentID(),house2.getHousingID());
+		User admin=new User("Haya",pass,"Admin",1);
 		users.add(admin);
         users.add(owner1);
         users.add(tenant1);
@@ -88,9 +101,9 @@ public static void main(String[] args) {
 	String type="";
 	boolean success=false;
 	User obj=new User();
-	apartment apart=new apartment();
+	Apartment apart=new Apartment();
 	Housing house=new Housing();
-	reservations newReservation;
+	Reservations newReservation;
 	Furniture fur;
 	String furType;
 	int price;
@@ -102,7 +115,7 @@ public static void main(String[] args) {
 	//Logger logger = Logger.getLogger(Main.class.getSimpleName());
     Logger logger = LogManager.getLogger(Main.class);
     ArrayList<Housing> housingsWaitingForApproval = new ArrayList<Housing>();
-    ArrayList<apartment> apartmentsWaitingForApproval = new ArrayList<apartment>();
+    ArrayList<Apartment> apartmentsWaitingForApproval = new ArrayList<Apartment>();
 	/*for(Handler iHandler:logger.getParent().getHandlers())
     {
     logger.getParent().removeHandler(iHandler);
@@ -179,7 +192,7 @@ public static void main(String[] args) {
 					s=input.nextLine();
 					x=input.nextInt();
 					apart.setApartmentID(x);
-			    	x=apartment.getApartmentIndex(apart.getApartmentID(),house.getHousingID(),apartmentsArray);
+			    	x=Apartment.getApartmentIndex(apart.getApartmentID(),house.getHousingID(),apartmentsArray);
 			    	if(x<0) {
 						logger.info( "It appears that the house you requested is not in our system,make sure you have the right id and try again");
 
@@ -195,7 +208,7 @@ public static void main(String[] args) {
 								tenant.setRent(apartmentsArray.get(x).getRent());
 								//tenant.setOwner(tenantProfile.getOwnerName());
 								
-						    	newReservation =new reservations(id,apart.getApartmentID());
+						    	newReservation =new Reservations(id,apart.getApartmentID());
 						    	reservationsArray.add(newReservation);
 						    	int d=apart.getCurrentNumberOfRoommates()+1;
 						    	apart.setCurrentNumberOfRoommates(d);
@@ -215,7 +228,7 @@ public static void main(String[] args) {
 								tenant.setOwner(sentObj);
 								tenant.setRent(apartmentsArray.get(x).getRent());
 
-						    	newReservation =new reservations(id,apart.getApartmentID());
+						    	newReservation =new Reservations(id,apart.getApartmentID());
 						    	reservationsArray.add(newReservation);
 						    	apartmentsArray.get(x).setAvailabe(false);
 						    	//apart.setAvailabe(false);
@@ -317,7 +330,7 @@ if (x == 1) { //add new housing
 	housingsWaitingForApproval.add(newHousing);
 	
 
-	apartment newApartment=new apartment();
+	Apartment newApartment=new Apartment();
 	logger.info( " Enter Information of the an apartment in this housing :\n ID:");
 	logger.info( "\n");
 	x = input.nextInt();
@@ -455,21 +468,21 @@ if (x == 1) { //add new housing
 		
 		int chosenHousingIndex= Housing.getIndexByHousingID(chosenHousingID, housingsArray);
 
-		apartment.printApartmentsOnFloor(apartmentsArray,floorNum,chosenHousingID);
+		Apartment.printApartmentsOnFloor(apartmentsArray,floorNum,chosenHousingID);
 		
 		logger.info( "Enter apartment id :");
 		logger.info( "\n");
 		x=input.nextInt();
 		input.nextLine();
-		while(!(apartment.doesExist(x, apartmentsArray, chosenHousingID))) {
+		while(!(Apartment.doesExist(x, apartmentsArray, chosenHousingID))) {
 			logger.info( "wrong input. Enter apartment id that exists :");
 		    logger.info( "\n"); 
 		    x=input.nextInt();
 			input.nextLine();
 			//chosenApartmentIndex=apartment.getIndexByApartmentID(x,chosenHousingID, apartmentsArray);
 		    } 
-		    int chosenApartmentIndex=apartment.getIndexByApartmentID(x,chosenHousingID, apartmentsArray);
-		    apartment.printApartmentInfo(apartmentsArray.get(chosenApartmentIndex), reservationsArray,users);
+		    int chosenApartmentIndex=Apartment.getIndexByApartmentID(x,chosenHousingID, apartmentsArray);
+		    Apartment.printApartmentInfo(apartmentsArray.get(chosenApartmentIndex), reservationsArray,users);
 		
 	
 	
@@ -594,13 +607,13 @@ if (x == 1) { //add new housing
 				 logger.info( "\n");
 				 int apartmentID = input.nextInt();
 		         input.nextLine();
-					while( !(apartment.doesExist(apartmentID, apartmentsArray, housingID)) ) {
+					while( !(Apartment.doesExist(apartmentID, apartmentsArray, housingID)) ) {
 						logger.info( "wrong input. Enter apartment id that exists :");
 					    logger.info( "\n"); 
 					    apartmentID=input.nextInt();
 						input.nextLine();
 					    } 
-				int chosenApartmentIndex=apartment.getIndexByApartmentID(apartmentID,housingID, apartmentsArray);	  
+				int chosenApartmentIndex=Apartment.getIndexByApartmentID(apartmentID,housingID, apartmentsArray);	  
 	        	logger.info( "   press 1. to modify apartment's availableServices \n     "
 			            + "         2.  modify apartment's rent \n     "
 			            + "         3.  modify apartment's peopleCapacity \n     "
