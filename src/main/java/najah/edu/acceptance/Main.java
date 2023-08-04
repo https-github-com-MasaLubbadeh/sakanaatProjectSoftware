@@ -1,13 +1,7 @@
 package najah.edu.acceptance;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
-import java.util.logging.Handler;
-import java.util.logging.Level;
-//import java.util.logging.Logger;
-//@SpringBootApplication
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,7 +10,7 @@ public class Main {
 	private static ArrayList <Reservations> reservationsArray= new ArrayList<Reservations>();
 	private static ArrayList<User> users = new ArrayList<User>();
 	private static ArrayList<Apartment> apartmentsArray = new ArrayList<Apartment>();
-	private static List<Housing> housingsArray = new ArrayList<Housing>();
+	private static ArrayList<Housing> housingsArray = new ArrayList<Housing>();
 	private static ArrayList<String> furnitureArray=new ArrayList<String>();
 	private static ArrayList<String> pictures=new ArrayList<String>();
 
@@ -90,6 +84,9 @@ public static void prepareInfo() {
 	}
 public static void main(String[] args) {
 	@SuppressWarnings("resource")
+	final String modifyString1="Modify Housing";
+	final String modifyString2="Modify Apartment";
+
 	Scanner input = new Scanner(System.in);
 	String name;
 	String password;
@@ -97,7 +94,7 @@ public static void main(String[] args) {
 	int x;
 	int id;
 	String s;
-	String Student;
+	String student;
 	String type="";
 	boolean success=false;
 	User obj=new User();
@@ -112,15 +109,9 @@ public static void main(String[] args) {
 	Housing tenantProfile=new Housing();
 	User sentObj=new User();
 	Main.prepareInfo();
-	//Logger logger = Logger.getLogger(Main.class.getSimpleName());
     Logger logger = LogManager.getLogger(Main.class);
     ArrayList<Housing> housingsWaitingForApproval = new ArrayList<Housing>();
     ArrayList<Apartment> apartmentsWaitingForApproval = new ArrayList<Apartment>();
-	/*for(Handler iHandler:logger.getParent().getHandlers())
-    {
-    logger.getParent().removeHandler(iHandler);
-    }*/
-	//logger.log(Level.INFO, "\n");
     logger.info("\n");
 
     logger.info("|                   Welcome to  Sakankom                   |");
@@ -135,20 +126,17 @@ public static void main(String[] args) {
 		logger.info( "|                   Enter you password                   |");
 		password = input.nextLine();
 		success=MainFunc.loginSuccess(name, password, users);
-		if (success==false) {
+		if (!success) {
 			logged = 0;
 			logger.info(
 					"|!!!!!!!!!!!!!!!!!!!!!!!!!!!!Login faild!!!!!!!!!!!!!!!!!!!!!!!!!!!!|");
-////break;
 		} else {
 			logged = 1;
 			type=MainFunc.getTypeFromName(name, users);
 			obj.setType(type);
 			logger.info(type);
-					/////////////////////////////////////////////////////////////////////////
+
 			logger.info("|______________________________________________________________________________________________________________________________|");
-			//logger.info("|                   Welcome Back ");	
-			//logger.info(name);
 			logger.info("Welcome Back "+ name);
 		}
 		if(logged==1&&obj.getType().equalsIgnoreCase("tenant")) {
@@ -165,16 +153,7 @@ public static void main(String[] args) {
 				if(x==1) {
 					MainFunc.tenantView(apartmentsArray, housingsArray);
 				}
-				else if(x==2) {
-					/*logger.info( "Enter the apartment id you want to view ");
-					s=input.nextLine();
-					x=input.nextInt();
-					logger.info( "Enter the house id the apartment is in ");
-					s=input.nextLine();
-					id=input.nextInt();
-					apart=MainFunc.viewApartment(x, id,apartmentsArray);
-					logger.info("|Apartment:"+apart.toString()+"        |");*/
-					//logger.info();		
+				else if(x==2) {	
 					MainFunc.printDetails(apartmentsArray, housingsArray);
 				}
 				else if(x==3) {				
@@ -183,7 +162,7 @@ public static void main(String[] args) {
 					s=input.nextLine();
 					s=input.nextLine();
 
-					Student=s;
+					student=s;
 					logger.info( "Enter on what building the apartment you want to book (id) ");
 					//s=input.nextLine();
 					x=input.nextInt();
@@ -197,16 +176,14 @@ public static void main(String[] args) {
 						logger.info( "It appears that the house you requested is not in our system,make sure you have the right id and try again");
 
 			    	}else {
-						if((apartmentsArray.get(x).isStudentHousing())&&Student.equalsIgnoreCase("yes")) {
+						if((apartmentsArray.get(x).isStudentHousing())&&student.equalsIgnoreCase("yes")) {
 							if(apartmentsArray.get(x).thereIsSpace()&&apartmentsArray.get(x).isAvailabe()) {
 								tenant.setType("Student");
-								tenantProfile.setOwnerName(housingsArray.get(house.getIndex(house.getHousingID(), housingsArray)).getOwnerName());
-								//logger.info("namamamammm"+tenantProfile.getOwnerName());
+								tenantProfile.setOwnerName(housingsArray.get(Housing.getIndex(house.getHousingID(), housingsArray)).getOwnerName());
 								sentObj.setName(tenantProfile.getOwnerName());
 								sentObj.setPhoneNumber(users.get(User.getIndex(tenantProfile.getOwnerName(), users)).getPhoneNumber());
 								tenant.setOwner(sentObj);
 								tenant.setRent(apartmentsArray.get(x).getRent());
-								//tenant.setOwner(tenantProfile.getOwnerName());
 								
 						    	newReservation =new Reservations(id,apart.getApartmentID());
 						    	reservationsArray.add(newReservation);
@@ -216,13 +193,13 @@ public static void main(String[] args) {
 						    	logger.info( "Booked succefully");
 							}else logger.info( "Sorry, this student housing is full");					
 						}
-						else if((apartmentsArray.get(x).isStudentHousing())&&Student.equalsIgnoreCase("no")) {
+						else if((apartmentsArray.get(x).isStudentHousing())&&student.equalsIgnoreCase("no")) {
 							logger.info( "Sorry, you can't book a student housing unless you are a student");
 						}
-						else if(apartmentsArray.get(x).isFamilyHousing()&&Student.equalsIgnoreCase("no")) {
+						else if(apartmentsArray.get(x).isFamilyHousing()&&student.equalsIgnoreCase("no")) {
 							if(apartmentsArray.get(x).isAvailabe()) {
 								tenant.setType("Family");
-								tenantProfile.setOwnerName(housingsArray.get(house.getIndex(house.getHousingID(), housingsArray)).getOwnerName());
+								tenantProfile.setOwnerName(housingsArray.get(Housing.getIndex(house.getHousingID(), housingsArray)).getOwnerName());
 								sentObj.setName(tenantProfile.getOwnerName());
 								sentObj.setPhoneNumber(users.get(User.getIndex(sentObj.getName(), users)).getPhoneNumber());
 								tenant.setOwner(sentObj);
@@ -231,7 +208,6 @@ public static void main(String[] args) {
 						    	newReservation =new Reservations(id,apart.getApartmentID());
 						    	reservationsArray.add(newReservation);
 						    	apartmentsArray.get(x).setAvailabe(false);
-						    	//apart.setAvailabe(false);
 						    	logger.info( "Booked succefully");
 							}
 
@@ -273,11 +249,10 @@ public static void main(String[] args) {
 		            + "       3. To add communication way \n     "
 		            + "       0. log out   ");
 logger.info( "\n");
-//logger.log(Level.INFO, "      0. log out ");
 x = input.nextInt();
 input.nextLine();
 
-if (x == 1) { //add new housing
+if (x == 1) { /*add new housing*/
 
 	ArrayList <String> pics= new ArrayList<String>();
 	Housing newHousing=new Housing();
@@ -287,7 +262,7 @@ if (x == 1) { //add new housing
 	input.nextLine();
 	
 
-	while(newHousing.doesExist(housingID, housingsArray)) {
+	while(Housing.doesExist(housingID, housingsArray)) {
 		logger.info( " this ID already exists Enter another one :\n ID:");
 		logger.info( "\n");
 		housingID = input.nextInt();
@@ -317,16 +292,13 @@ if (x == 1) { //add new housing
 	s = input.nextLine();	
 
 	newHousing.setLocation(s);
+	logger.info("the new housing is: ");
+	logger.info(newHousing.toString());
 	
-	System.out.println(newHousing.toString());
-	//housingsArray.add(newHousing);
+	logger.info("\n housings in thy system: ");
 	for(int i=0;i<housingsArray.size();i++) {
-		System.out.println("arr"+i+"= "+housingsArray.get(i).toString());
+		logger.info("arr"+i+"= "+housingsArray.get(i).toString());
 	}
-	/*
-	logger.info( " housing added successfuly");
-	logger.info( "\n");
-	*/
 	housingsWaitingForApproval.add(newHousing);
 	
 
@@ -335,7 +307,7 @@ if (x == 1) { //add new housing
 	logger.info( "\n");
 	x = input.nextInt();
 	input.nextLine();
-	while(newApartment.doesExist(x, apartmentsArray,housingID)) {
+	while(Apartment.doesExist(x, apartmentsArray,housingID)) {
 		logger.info( " this ID already exists enter another one :\n ID:");
 		logger.info( "\n");
 		x = input.nextInt();
@@ -404,7 +376,6 @@ if (x == 1) { //add new housing
 	logger.info( "\n");
 	s=input.nextLine();
 	newApartment.setExtraInfo(s);
-	///newApartment.setAvailabe(true);
 	
 	logger.info( " Enter apartment Information : add pictures of this apartment :");
 	logger.info( "\n");
@@ -423,23 +394,16 @@ if (x == 1) { //add new housing
 	newApartment.setHousingID(housingID);
 	newApartment.setAvailabe(true);
 	newApartment.setCurrentNumberOfRoommates(0);
-	//apartmentsArray.add(newApartment);
-	/*
-	logger.info( " apartment added successfuly ");
-	logger.info( "\n");
-	*/
 	apartmentsWaitingForApproval.add(newApartment);
 	}
 
- else if (x == 2) { //show owner control panel
-	 List <Housing> returnedArray= new  ArrayList <Housing>();
+ else if (x == 2) { /*show owner control panel*/
+	 ArrayList <Housing> returnedArray= new  ArrayList <Housing>();
 	    logger.info( " here are your housings:");
-	    //MainFunc.printHousingsToSpecificOwner(housingsArray,loggedinUser.getName());
 	    returnedArray=MainFunc.returnHousingsToSpecificOwner(housingsArray, name);
 		MainFunc.printHousingArray(returnedArray);
 	    logger.info( "Enter id of one of your housings to view its apartments:");
 		logger.info( "\n");
-		//while()
 		
 		int chosenHousingID=input.nextInt();
 		input.nextLine();
@@ -450,8 +414,8 @@ if (x == 1) { //add new housing
 		   input.nextLine();
        }
 		
-		Housing.printTenantsCount(apartmentsArray,housingsArray,name);
-		Housing.printNumberOfFloors(housingsArray, chosenHousingID);
+       Housing.printTenantsCount(apartmentsArray,housingsArray,name);
+       Housing.printNumberOfFloors(housingsArray, chosenHousingID);
 		
 		logger.info( "Enter floor number :");
 		logger.info( "\n");
@@ -466,8 +430,6 @@ if (x == 1) { //add new housing
 			   input.nextLine();
 	       }
 		
-		int chosenHousingIndex= Housing.getIndexByHousingID(chosenHousingID, housingsArray);
-
 		Apartment.printApartmentsOnFloor(apartmentsArray,floorNum,chosenHousingID);
 		
 		logger.info( "Enter apartment id :");
@@ -479,14 +441,13 @@ if (x == 1) { //add new housing
 		    logger.info( "\n"); 
 		    x=input.nextInt();
 			input.nextLine();
-			//chosenApartmentIndex=apartment.getIndexByApartmentID(x,chosenHousingID, apartmentsArray);
 		    } 
 		    int chosenApartmentIndex=Apartment.getIndexByApartmentID(x,chosenHousingID, apartmentsArray);
 		    Apartment.printApartmentInfo(apartmentsArray.get(chosenApartmentIndex), reservationsArray,users);
 		
 	
 	
-}//x==2
+}
  else if (x == 3) {
 	 if( obj.getPhoneNumber() ==null ){
 	   logger.info( " Enter contact Information : your phone number :");
@@ -501,7 +462,7 @@ if (x == 1) { //add new housing
 			   logger.info( " wring input. enter y/n :");
 			   logger.info( "\n"); 
 			   s=input.nextLine();
-			  }//while
+			  }
 		  if(s.equalsIgnoreCase("y")) {
 			   logger.info( " Enter contact Information : your phone number :");
 			   logger.info( "\n"); 
@@ -519,7 +480,7 @@ if (x == 1) { //add new housing
 		  
 	 }
 	 
- }//x==3
+ }
 	else if(x==0) {
 		logged=0;
 		break;
@@ -560,10 +521,10 @@ if (x == 1) { //add new housing
 		        	 logger.info( "housing doesn't exists");
 					 logger.info( "\n");
 		         }
-			 }//whie
-        	 }//if
-         }
-         else if(x==2) { /////////////////////modifyyyy////////////////////////////////
+			 }
+        	 }    
+         } 
+         else if(x==2) { 
         	 logger.info( "Modify Housing : Enter ID of the housing : ");
 			 logger.info( "\n");
 			int housingID = input.nextInt();
@@ -583,26 +544,26 @@ if (x == 1) { //add new housing
 		    x = input.nextInt();
 	        input.nextLine();
 	        
-	        if(x==1) { // owner name
-	        	 logger.info( "Modify Housing " +housingID+ " : Enter the new owner name : ");
+	        if(x==1) {
+	        	 logger.info( modifyString1 +housingID+ " : Enter the new owner name : ");
 				 logger.info( "\n");
 				 s=input.nextLine();
 				 MainFunc.modifyOwnerName(housingsArray, housingID, s);
 			}
-	        else if (x==2) {// location
-	        	 logger.info( "Modify Housing " +housingID+ " : Enter the new location : ");
+	        else if (x==2) {
+	        	 logger.info( modifyString1 +housingID+ " : Enter the new location : ");
 				 logger.info( "\n");
 				 s=input.nextLine();
 				 MainFunc.modifyLocation(housingsArray, housingID, s);
 			}
-	        else if (x==3) {// numbersOfFloors
-	        	 logger.info( "Modify Housing " +housingID+ " : Enter the new numbersOfFloors : ");
+	        else if (x==3) {
+	        	 logger.info( modifyString1 +housingID+ " : Enter the new numbersOfFloors : ");
 				 logger.info( "\n");
 				 x=input.nextInt();
 				 input.nextLine();
 				 MainFunc.modifyNumOfFloors(housingsArray, housingID, x);
 	        }
-	        else if (x==4) {//modify apartment
+	        else if (x==4) {
 	        	 logger.info( "Modify apartment : Enter ID of an apartment in housing" +housingID+ " : ");
 				 logger.info( "\n");
 				 int apartmentID = input.nextInt();
@@ -623,34 +584,34 @@ if (x == 1) { //add new housing
 			     logger.info( "\n");
 			      x = input.nextInt();
 		          input.nextLine();
-		          if(x==1) { // availableServices
-			        	 logger.info( "Modify apartment  " +apartmentID+ " : Enter the new availableServices : ");
+		          if(x==1) { 
+			        	 logger.info( modifyString2 +apartmentID+ " : Enter the new availableServices : ");
 						 logger.info( "\n");
 						 s=input.nextLine();
 						 MainFunc.modifyAvailableServices(apartmentsArray, chosenApartmentIndex, s);
 					}
-			        else if (x==2) {// rent
-			        	 logger.info( "Modify apartment  " +apartmentID+ " : Enter the new rent : ");
+			        else if (x==2) {
+			        	 logger.info( modifyString2 +apartmentID+ " : Enter the new rent : ");
 						 logger.info( "\n");
 						 x=input.nextInt();
 						 input.nextLine();
 						 MainFunc.modifyRent(apartmentsArray, chosenApartmentIndex, x);
 					}
-			        else if (x==3) {// peopleCapacity
-			        	 logger.info( "Modify apartment  " +apartmentID+ " : Enter the new peopleCapacity : ");
+			        else if (x==3) {
+			        	 logger.info( modifyString2 +apartmentID+ " : Enter the new peopleCapacity : ");
 						 logger.info( "\n");
 						 x=input.nextInt();
 						 input.nextLine();
 						 MainFunc.modifyPeopleCapacity(apartmentsArray, chosenApartmentIndex, x);
 					}
-			        else if (x==4) {// extraInfo
-			        	 logger.info( "Modify apartment  " +apartmentID+ " : Enter extraInfo : ");
+			        else if (x==4) {
+			        	 logger.info( modifyString2 +apartmentID+ " : Enter extraInfo : ");
 						 logger.info( "\n");
 						 s=input.nextLine();
 						 MainFunc.modifyExtraInfo(apartmentsArray, chosenApartmentIndex, s);
 					}
-			        else if (x==5) {// type
-			        	 logger.info( "Modify apartment  " +apartmentID+ " : Enter new type(s / f) : ");
+			        else if (x==5) {
+			        	 logger.info( modifyString2 +apartmentID+ " : Enter new type(s / f) : ");
 						 logger.info( "\n");
 						 s=input.nextLine();
 						 while(!(s.equalsIgnoreCase("f")) && !(s.equalsIgnoreCase("s")) ) {
@@ -665,8 +626,8 @@ if (x == 1) { //add new housing
 	        	
 	        }
 			 
-         }//modify
-         else if(x==3) {// reservationss
+         }
+         else if(x==3) {
         	 MainFunc.printReservations(reservationsArray);
          }
 			else if(x==0) {

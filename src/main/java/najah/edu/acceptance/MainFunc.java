@@ -89,7 +89,7 @@ public class MainFunc {
 
 	
 	
-	public static List <Housing> returnHousingsToSpecificOwner(List <Housing> housingsArray,String ownerName) {
+	public static ArrayList <Housing> returnHousingsToSpecificOwner(List <Housing> housingsArray,String ownerName) {
 		ArrayList <Housing> ownerHousings =new ArrayList <Housing>(); 
 		for(int i=0; i<housingsArray.size();i++) {
 			if(housingsArray.get(i).getOwnerName().equalsIgnoreCase(ownerName)) {
