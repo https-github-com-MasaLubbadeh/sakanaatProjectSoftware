@@ -208,6 +208,7 @@ public static void printApartmentInfo(Apartment apartmentObj,List<Reservations> 
 			}
 		}
 	}
+	
 	String tenantInfoString=tenantInfo.toString();
 	logger.info(  "%s %n there are %d bathrooms and %d rooms and %d Balcony", tenantInfoString, apartmentObj.numberOfBathrooms 
 			,apartmentObj.numberOfRoom, apartmentObj.numberOfBalconies );
