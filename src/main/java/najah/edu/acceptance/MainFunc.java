@@ -50,9 +50,12 @@ public class MainFunc {
 
 	public static void printControlPanel(TenantProfile obj) {
 		logger.info("|______________________________________________________________________________________________________________________________|");
-		if (obj.getTenantName() != null) {
-		    logger.info(String.format("Hello %s . Welcome Back", obj.getTenantName()));
+		String tenantName = obj.getTenantName();
+		if (tenantName != null) {
+		    String message = String.format("Hello %s. Welcome Back", tenantName);
+		    logger.info(message);
 		}
+
 
 		logger.info(String.format("Name: %s                   PhoneNumber: %s",obj.getTenantName(),obj.getPhoneNumber()));
 		logger.info("");
