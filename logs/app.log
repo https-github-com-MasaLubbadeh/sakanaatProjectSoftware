@@ -2644,3 +2644,491 @@
  - tenantID: %d
  - %s %n there are %d bathrooms and %d rooms and %d Balcony
  - %n
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - Admin
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back Haya
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+            0.  log out  
+     
+ - 
+
+ - ( tenant with ID:2 has a reservation in apartment with ID:1 in housing with ID: 1 ) 
+
+ - 
+
+ - ( tenant with ID:3 has a reservation in apartment with ID:1 in housing with ID: 2 ) 
+
+ - 
+
+ - ( tenant with ID:4 has a reservation in apartment with ID:1 in housing with ID: 2 ) 
+
+ - 
+
+ -    press 1. to approve added housings 
+            2.  modify the housing data 
+            3.  watch reservations 
+            0.  log out  
+     
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - 
+ number of tenants in this housing: 5
+ - 
+
+ - \n number of Floors: 3
+ - 
+
+ - Enter floor number :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - 
+ number of tenants in this housing: 5
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - Enter floor number :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - 
+ apartments on floor 4 : 
+
+ - 
+
+ - Enter apartment id :
+ - 
+
+ - tenantID: 3
+ - tenantID: 4
+ - info about the tenant and the apartment: 
+
+ name: Masa
+ phone number: 0599344589 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - 
+ number of tenants in this housing: 5
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - Enter floor number :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - 
+ apartments on floor 7 : 
+
+ - 
+
+ - Enter apartment id :
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - 
+ number of tenants in this housing: 5
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - Enter floor number :
+ - 
+
+ - 
+ apartments on floor 4 : 
+
+ - 
+
+ - Enter apartment id :
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - 
+ number of tenants in this housing: 5
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - Enter floor number :
+ - 
+
+ - wrong input. Enter floor that exists :
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=students, housingID=2, rent=400, floorNum=1, isAvailabe=false, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - Enter apartment id :
+ - 
+
+ - info about the tenant and the apartment: 
+ 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - 
+ number of tenants in this housing: 5
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - Enter floor number :
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=students, housingID=2, rent=400, floorNum=1, isAvailabe=false, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - Enter apartment id :
+ - 
+
+ - tenantID: 3
+ - tenantID: 4
+ - info about the tenant and the apartment: 
+
+ name: Masa
+ phone number: 0599344589 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - 
+ number of tenants in this housing: 5
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - Enter floor number :
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=students, housingID=2, rent=400, floorNum=1, isAvailabe=false, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - Enter apartment id :
+ - 
+
+ - tenantID: 3
+ - 3dfsfsef
+ - tenantID: 4
+ - info about the tenant and the apartment: 
+
+ name: Masa
+ phone number: 0599344589 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - 
+ number of tenants in this housing: 5
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - Enter floor number :
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=students, housingID=2, rent=400, floorNum=1, isAvailabe=false, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - Enter apartment id :
+ - 
+
+ - tenantID: 3
+ - 3 dfsfsef Masa ff 
+ - tenantID: 4
+ - info about the tenant and the apartment: 
+
+ name: Masa
+ phone number: 0599344589 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+

@@ -103,8 +103,10 @@ public class Housing {
 	
 	public static void printNumberOfFloors(List<Housing> housings, int housingID) {
 		int housingIndex=Housing.getIndexByHousingID(housingID, housings);
-		logger.info( String.format("\\n number of Floors: %s", housings.get(housingIndex).getNumbersOfFloors()));
-		logger.info( "\n");
+		if(housings.get(housingIndex) !=null) {
+		String format=String.format("\n number of Floors: %s", housings.get(housingIndex).getNumbersOfFloors());
+		logger.info(format);
+		logger.info( "\n"); }
 	}
 
 public static void printTenantsCount(List<Apartment> apartments,List<Housing> housings, String ownerName) {
@@ -121,7 +123,8 @@ public static void printTenantsCount(List<Apartment> apartments,List<Housing> ho
 		 }
 		}
 	
-		logger.info(String.format("\n number of tenants in this housing: %d", count));
+		String format1=String.format("\n number of tenants in this housing: %d", count); 
+		logger.info(format1);
 		logger.info("\n");
 		
 	} 
