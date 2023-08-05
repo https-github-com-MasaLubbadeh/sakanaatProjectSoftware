@@ -48,4 +48,8 @@
 </dependency>
 
 	</dependencies>
+	<properties>
+  <sonar.organization>https-github-com-masalubbadeh</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
 </project>
