@@ -206,8 +206,9 @@ public class MainFunc {
 	public static void printReservations(List <Reservations> reservationsArray) {
 		String message="";
 		for(int i=0; i<reservationsArray.size();i++) {
-			if(reservationsArray.get(i)!=null)
 			message=reservationsArray.get(i).toString();
+
+			if(reservationsArray.get(i)!=null)
 			logger.info(message);
 			logger.info("\n");
 		}
