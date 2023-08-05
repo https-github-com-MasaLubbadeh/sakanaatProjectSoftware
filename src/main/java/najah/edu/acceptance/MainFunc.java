@@ -208,9 +208,11 @@ public class MainFunc {
 		for(int i=0; i<reservationsArray.size();i++) {
 			message=reservationsArray.get(i).toString();
 
-			if(reservationsArray.get(i)!=null)
-			logger.info(message);
-			logger.info("\n");
+			if(reservationsArray.get(i)!=null) {
+				logger.info(message);
+				logger.info("\n");
+			}
+			
 		}
 	}
 
