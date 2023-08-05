@@ -135,9 +135,8 @@ public static void tenantHandle(String name,User obj) {
 			logger.info("This is how your Advertisement looks like");
 			
 			format=fur.toString();
-			if(fur != null) {
 				logger.info(format);
-			}
+
 			
 		}
 		else if(x==5) {
@@ -154,28 +153,32 @@ public static void tenantHandle(String name,User obj) {
 	
 
 }
+private static void bookStudentHousing(int id,TenantProfile tenant,Apartment apart,Housing house,User sentObj,Reservations newReservation,Housing tenantProfile) {
+	if(apartmentsArray.get(x).thereIsSpace()&&apartmentsArray.get(x).isAvailabe()) {
+		tenant.setType("Student");
+		tenantProfile.setOwnerName(housingsArray.get(Housing.getIndex(house.getHousingID(), housingsArray)).getOwnerName());
+		sentObj.setName(tenantProfile.getOwnerName());
+		sentObj.setPhoneNumber(users.get(User.getIndex(tenantProfile.getOwnerName(), users)).getPhoneNumber());
+		tenant.setOwner(sentObj);
+		tenant.setRent(apartmentsArray.get(x).getRent());
+		
+    	newReservation =new Reservations(id,apart.getApartmentID());
+    	reservationsArray.add(newReservation);
+    	int d=apart.getCurrentNumberOfRoommates()+1;
+    	apart.setCurrentNumberOfRoommates(d);
+    	if(apartmentsArray.get(x).getCurrentNumberOfRoommates()==apartmentsArray.get(x).getPeopleCapacity())apartmentsArray.get(x).setAvailabe(false);
+    	logger.info( "Booked succefully");
+	}else logger.info( "Sorry, this student housing is full");	
+}
 private static void handlecomplexity(int x,int id,TenantProfile tenant	,String student,Apartment apart,Housing house) {
-	Reservations newReservation;
+	Reservations newReservation=new Reservations();
 	Housing tenantProfile=new Housing();
 	User sentObj=new User();
 	
 	
 	if((apartmentsArray.get(x).isStudentHousing())&&student.equalsIgnoreCase("yes")) {
-		if(apartmentsArray.get(x).thereIsSpace()&&apartmentsArray.get(x).isAvailabe()) {
-			tenant.setType("Student");
-			tenantProfile.setOwnerName(housingsArray.get(Housing.getIndex(house.getHousingID(), housingsArray)).getOwnerName());
-			sentObj.setName(tenantProfile.getOwnerName());
-			sentObj.setPhoneNumber(users.get(User.getIndex(tenantProfile.getOwnerName(), users)).getPhoneNumber());
-			tenant.setOwner(sentObj);
-			tenant.setRent(apartmentsArray.get(x).getRent());
-			
-	    	newReservation =new Reservations(id,apart.getApartmentID());
-	    	reservationsArray.add(newReservation);
-	    	int d=apart.getCurrentNumberOfRoommates()+1;
-	    	apart.setCurrentNumberOfRoommates(d);
-	    	if(apartmentsArray.get(x).getCurrentNumberOfRoommates()==apartmentsArray.get(x).getPeopleCapacity())apartmentsArray.get(x).setAvailabe(false);
-	    	logger.info( "Booked succefully");
-		}else logger.info( "Sorry, this student housing is full");					
+		bookStudentHousing(id,tenant,apart,house,sentObj,newReservation,tenantProfile);
+				
 	}
 	else if((apartmentsArray.get(x).isStudentHousing())&&student.equalsIgnoreCase("no")) {
 		logger.info( "Sorry, you can't book a student housing unless you are a student");
