@@ -8,9 +8,8 @@ import org.apache.logging.log4j.Logger;
 
 public class MainFunc {
 
-	public MainFunc() {
+	private MainFunc() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	static Logger logger = LogManager.getLogger(MainFunc.class);
 	static final  String ST="updated successfuly";
@@ -59,11 +58,11 @@ public class MainFunc {
 		String tenantName = obj.getTenantName();
 		String phoneNumber=obj.getPhoneNumber();
 		String status=obj.getType();
-		String OwnerName=obj.getOwner().getName();
-		String OphoneNumber=obj.getOwner().getPhoneNumber();
+		String ownerName=obj.getOwner().getName();
+		String ophoneNumber=obj.getOwner().getPhoneNumber();
 		int rent=obj.getRent();
 		String message="";
-		if (tenantName != null &&phoneNumber!=null&&status!=null&&OwnerName!=null&&OphoneNumber!=null&&rent!=-1) {
+		if (tenantName != null &&phoneNumber!=null&&status!=null&&ownerName!=null&&ophoneNumber!=null&&rent!=-1) {
 			
 		    message = String.format("Hello %s. Welcome Back", tenantName);
 		    logger.info(message);
@@ -80,7 +79,7 @@ public class MainFunc {
 						
 			logger.info("                  Owner information            ");
 			
-			message=String.format("Owner Name: %s                   PhoneNumber: %s",OwnerName,OphoneNumber);
+			message=String.format("Owner Name: %s                   PhoneNumber: %s",ownerName,ophoneNumber);
 			logger.info(message);
 			
 			message=String.format("Rent: %d",rent );
@@ -94,17 +93,17 @@ public class MainFunc {
 	public static void printDetails(List <Apartment>apartmentsArray , List <Housing>housingsArray) {
 		for(int i = 0; i < housingsArray.size(); i++) {
 			int houseID=housingsArray.get(i).getHousingID();
-			String Location=housingsArray.get(i).getLocation();
+			String location=housingsArray.get(i).getLocation();
 			String message="";
-				if(houseID!=-1&&Location!=null) {
-					message=String.format("Housing with id %d  is on this location %s  and have these apartments:",houseID,Location);
+				if(houseID!=-1&&location!=null) {
+					message=String.format("Housing with id %d  is on this location %s  and have these apartments:",houseID,location);
 					logger.info(message);
 					for(int j=0;j<apartmentsArray.size();j++) {
 						int apartID=apartmentsArray.get(j).getHousingID();
 						int price=apartmentsArray.get(j).getRent();
 						String service=apartmentsArray.get(j).getAvailableServices();
-						if(apartID!=-1) {
-							if(houseID == apartID) {
+						if(apartID!=-1 &&houseID == apartID) {
+							
 								
 								message=(String.format("Apartment with this id %d  have these information", apartID));
 								logger.info(message);
@@ -124,7 +123,7 @@ public class MainFunc {
 								logger.info("\n");
 
 							}
-						}
+						
 						
 					}
 				}
@@ -154,7 +153,8 @@ public class MainFunc {
 	public static void printHousingArray(List <Housing> housingsArray) {
 		for(int i=0; i<housingsArray.size();i++) {
 			if(housingsArray.get(i)!=null) {
-				logger.info( housingsArray.get(i).toString());
+				String message=housingsArray.get(i).toString();
+				logger.info(message );
 				logger.info( "\n");
 			}
 				
@@ -217,13 +217,17 @@ public class MainFunc {
 	
 	
 	public static void printWaitingList(List <Housing> housingsArray,List <Apartment> apartmentsArray) {
+		String message="";
 		 for(int i=0;i<housingsArray.size();i++) {
 			 if(housingsArray.get(i)!=null&&apartmentsArray.get(i)!=null) {
 				 logger.info( "here are the housings(with apartment) in the waithing List : ");
-				 logger.info( housingsArray.get(i).toString());
+				 message= housingsArray.get(i).toString();
+				 logger.info(message);
 				 logger.info( "\n");
+				 
 				 logger.info("with this apartment : ");
-				 logger.info(apartmentsArray.get(i).toString());
+				 message=apartmentsArray.get(i).toString();
+				 logger.info(message);
 
 				 logger.info( "\n");
 				 
