@@ -253,29 +253,7 @@ public static void adminHandle( List<Housing> housingsWaitingForApproval,List<Ap
  if(x==1) {
 	 MainFunc.printWaitingList(housingsWaitingForApproval, apartmentsWaitingForApproval);
 	 if(!housingsWaitingForApproval.isEmpty()) {
-	 while(true) {
-		 logger.info( "Enter ID of housings which you approve and they'll be added :");
-		 logger.info( "\n");
-		 logger.info( "Enter 0 when you are finished :");
-		 logger.info( "\n");
-		 x = input.nextInt();
-         input.nextLine();
-         if(x==0) break;
-         
-         else if(  MainFunc.checkEnteredHousingID(housingsWaitingForApproval, x)) {
-		  int index= Housing.getIndexByHousingID(x, housingsWaitingForApproval);
-		  housingsArray.add(housingsWaitingForApproval.get(index));
-		  apartmentsArray.add(apartmentsWaitingForApproval.get(index));
-		  format=String.format("housing %d added successfuly with its apartment", x);
-		  logger.info(format);
-
-		  logger.info( "\n");
-         }
-         else {
-        	 logger.info( "housing doesn't exists");
-			 logger.info( "\n");
-         }
-	 }
+			 insideWhileAdmin( housingsWaitingForApproval ,apartmentsWaitingForApproval);
 	 }    
  } 
  else if(x==2) { 
@@ -321,73 +299,7 @@ public static void adminHandle( List<Housing> housingsWaitingForApproval,List<Ap
 		 MainFunc.modifyNumOfFloors(housingsArray, housingID, x);
     }
     else if (x==4) {
-    	format=String.format("%s %d : Enter ID of an apartment in housing : ",modifyString1,housingID);
-
-    	 logger.info(format);
-		 logger.info( "\n");
-		 int apartmentID = input.nextInt();
-         input.nextLine();
-			while( !(Apartment.doesExist(apartmentID, apartmentsArray, housingID)) ) {
-				logger.info( "wrong input. Enter apartment id that exists :");
-			    logger.info( "\n"); 
-			    apartmentID=input.nextInt();
-				input.nextLine();
-			    } 
-		int chosenApartmentIndex=Apartment.getIndexByApartmentID(apartmentID,housingID, apartmentsArray);	  
-    	logger.info( "   press 1. to modify apartment's availableServices \n     "
-	            + "         2.  modify apartment's rent \n     "
-	            + "         3.  modify apartment's peopleCapacity \n     "
-	            + "         4.  modify apartment's extraInfo  \n     "
-	            + "         5.  modify apartment's type  \n     "
-	            );
-	     logger.info( "\n");
-	      x = input.nextInt();
-          input.nextLine();
-          if(x==1) { 
-        	    format=String.format("%s %d : Enter the new availableServices : ",modifyString2,apartmentID);
-	        	 logger.info( format );
-	        	 logger.info( "\n");
-				 s=input.nextLine();
-				 MainFunc.modifyAvailableServices(apartmentsArray, chosenApartmentIndex, s);
-			}
-	        else if (x==2) {
-	        	format=String.format("%s %d : Enter the new rent : ",modifyString2,apartmentID);
-	        	 logger.info( format );
-				 logger.info( "\n");
-				 x=input.nextInt();
-				 input.nextLine();
-				 MainFunc.modifyRent(apartmentsArray, chosenApartmentIndex, x);
-			}
-	        else if (x==3) {
-	        	format=String.format("%s %d : Enter the new peopleCapacity : ",modifyString2,apartmentID) ;
-	        	 logger.info(format);
-				 logger.info( "\n");
-				 x=input.nextInt();
-				 input.nextLine();
-				 MainFunc.modifyPeopleCapacity(apartmentsArray, chosenApartmentIndex, x);
-			}
-	        else if (x==4) {
-	        	format=String.format("%s %d : Enter extraInfo : ",modifyString2,apartmentID) ;
-	        	 logger.info(format );
-				 logger.info( "\n");
-				 s=input.nextLine();
-				 MainFunc.modifyExtraInfo(apartmentsArray, chosenApartmentIndex, s);
-			}
-	        else if (x==5) {
-	        	format=String.format("%s %d : Enter new type(s / f) : ",modifyString2,apartmentID);
-	        	 logger.info(format);
-				 logger.info( "\n");
-				 s=input.nextLine();
-				 while(!(s.equalsIgnoreCase("f")) && !(s.equalsIgnoreCase("s")) ) {
-		        	 logger.info( "wrong input. Enter (s / f) :  ");
-					 logger.info( "\n");
-			         s=input.nextLine();
-		        }
-				 MainFunc.modifyApartmentType(apartmentsArray, chosenApartmentIndex, s);
-			}
-        
-        
-    	
+    	adminHandleApartModify( modifyString1,  modifyString2, housingID  );
     }
 	 
  }
@@ -407,7 +319,104 @@ public static void adminHandle( List<Housing> housingsWaitingForApproval,List<Ap
 
 	
 }
+public static void insideWhileAdmin(List<Housing> housingsWaitingForApproval ,List<Apartment> apartmentsWaitingForApproval) {
+	 while(true) {
+		 logger.info( "Enter ID of housings which you approve and they'll be added :");
+		 logger.info( "\n");
+		 logger.info( "Enter 0 when you are finished :");
+		 logger.info( "\n");
+		 x = input.nextInt();
+         input.nextLine();
+         if(x==0) break;
+         
+         else if(  MainFunc.checkEnteredHousingID(housingsWaitingForApproval, x)) {
+		  int index= Housing.getIndexByHousingID(x, housingsWaitingForApproval);
+		  housingsArray.add(housingsWaitingForApproval.get(index));
+		  apartmentsArray.add(apartmentsWaitingForApproval.get(index));
+		  format=String.format("housing %d added successfuly with its apartment", x);
+		  logger.info(format);
 
+		  logger.info( "\n");
+         }
+         else {
+        	 logger.info( "housing doesn't exists");
+			 logger.info( "\n");
+         }
+	 }
+	
+}
+public static void adminHandleApartModify(String modifyString1, String modifyString2,int housingID  ) {
+
+	format=String.format("%s %d : Enter ID of an apartment in housing : ",modifyString1,housingID);
+
+	 logger.info(format);
+	 logger.info( "\n");
+	 int apartmentID = input.nextInt();
+     input.nextLine();
+		while( !(Apartment.doesExist(apartmentID, apartmentsArray, housingID)) ) {
+			logger.info( "wrong input. Enter apartment id that exists :");
+		    logger.info( "\n"); 
+		    apartmentID=input.nextInt();
+			input.nextLine();
+		    } 
+	int chosenApartmentIndex=Apartment.getIndexByApartmentID(apartmentID,housingID, apartmentsArray);	  
+	logger.info( "   press 1. to modify apartment's availableServices \n     "
+            + "         2.  modify apartment's rent \n     "
+            + "         3.  modify apartment's peopleCapacity \n     "
+            + "         4.  modify apartment's extraInfo  \n     "
+            + "         5.  modify apartment's type  \n     "
+            );
+     logger.info( "\n");
+      x = input.nextInt();
+      input.nextLine();
+      if(x==1) { 
+    	    format=String.format("%s %d : Enter the new availableServices : ",modifyString2,apartmentID);
+        	 logger.info( format );
+        	 logger.info( "\n");
+			 s=input.nextLine();
+			 MainFunc.modifyAvailableServices(apartmentsArray, chosenApartmentIndex, s);
+		}
+        else if (x==2) {
+        	format=String.format("%s %d : Enter the new rent : ",modifyString2,apartmentID);
+        	 logger.info( format );
+			 logger.info( "\n");
+			 x=input.nextInt();
+			 input.nextLine();
+			 MainFunc.modifyRent(apartmentsArray, chosenApartmentIndex, x);
+		}
+        else if (x==3) {
+        	format=String.format("%s %d : Enter the new peopleCapacity : ",modifyString2,apartmentID) ;
+        	 logger.info(format);
+			 logger.info( "\n");
+			 x=input.nextInt();
+			 input.nextLine();
+			 MainFunc.modifyPeopleCapacity(apartmentsArray, chosenApartmentIndex, x);
+		}
+        else if (x==4) {
+        	format=String.format("%s %d : Enter extraInfo : ",modifyString2,apartmentID) ;
+        	 logger.info(format );
+			 logger.info( "\n");
+			 s=input.nextLine();
+			 MainFunc.modifyExtraInfo(apartmentsArray, chosenApartmentIndex, s);
+		}
+        else if (x==5) {
+        	format=String.format("%s %d : Enter new type(s / f) : ",modifyString2,apartmentID);
+        	 logger.info(format);
+			 logger.info( "\n");
+			 s=input.nextLine();
+			 while(!(s.equalsIgnoreCase("f")) && !(s.equalsIgnoreCase("s")) ) {
+	        	 logger.info( "wrong input. Enter (s / f) :  ");
+				 logger.info( "\n");
+		         s=input.nextLine();
+	        }
+			 MainFunc.modifyApartmentType(apartmentsArray, chosenApartmentIndex, s);
+		}
+    
+    
+	
+
+	
+}
 public static void ownerHandle(List<Housing> housingsWaitingForApproval ,List<Apartment> apartmentsWaitingForApproval,User obj,String name) {
 	int logged=1;
 while(logged==1) {
@@ -421,155 +430,8 @@ input.nextLine();
 
 if (x == 1) { /*add new housing*/
 
-ArrayList <String> pics= new ArrayList<String>();
-Housing newHousing=new Housing();
-logger.info( " Enter Information of the new housing :\n ID:");
-logger.info( "\n");
-int housingID = input.nextInt();
-input.nextLine();
-
-
-while(Housing.doesExist(housingID, housingsArray)) {
-logger.info( " this ID already exists Enter another one :\n ID:");
-logger.info( "\n");
-housingID = input.nextInt();
-input.nextLine();
-
-}
-newHousing.setHousingID(housingID);
-
-
-logger.info( " Enter housing Information : numbersOfFloors:");
-logger.info( "\n");
-x = input.nextInt();
-input.nextLine();
-
-newHousing.setNumbersOfFloors(x);
-
-logger.info( " Enter housing Information : numbersOfApartmentInEachFloor:");
-logger.info( "\n");
-x = input.nextInt();
-input.nextLine();
-
-newHousing.setNumbersOfApartmentInEachFloor(x);
-newHousing.setOwnerName(name);
-
-logger.info( " Enter housing Information : location:");
-logger.info( "\n");
-s = input.nextLine();	
-
-newHousing.setLocation(s);
-logger.info("the new housing is: ");
-if(newHousing != null) {
-format=newHousing.toString();
-logger.info(format);
-}
-
-
-logger.info("\n housings in thy system: ");
-for(int i=0;i<housingsArray.size();i++) {
-format=String.format("arr %d = %s",i, housingsArray.get(i).toString() );
-if(format != null) {
-logger.info(format);
-}
-}
-housingsWaitingForApproval.add(newHousing);
-
-
-Apartment newApartment=new Apartment();
-logger.info( " Enter Information of the an apartment in this housing :\n ID:");
-logger.info( "\n");
-x = input.nextInt();
-input.nextLine();
-while(Apartment.doesExist(x, apartmentsArray,housingID)) {
-logger.info( " this ID already exists enter another one :\n ID:");
-logger.info( "\n");
-x = input.nextInt();
-input.nextLine();
-
-}
-newApartment.setApartmentID(x);
-logger.info( " Enter apartment Information : available servieces:");
-logger.info( "\n");
-s = input.nextLine();
-newApartment.setAvailableServices(s);
-
-logger.info( " Enter apartment Information : apartment TYPE (Enter s or f):");
-logger.info( "\n");
-s = input.nextLine();
-while(!(s.equalsIgnoreCase("s")) && !(s.equalsIgnoreCase("f")) ) {
-logger.info( "wrong input. Enter f or s : ");
-s = input.nextLine();
-}
-if(s.equalsIgnoreCase("s")) newApartment.setStudentHousing();
-else newApartment.setFamilyHousing();
-
-
-logger.info( " Enter apartment Information :  monthly rent:");
-logger.info( "\n");
-x = input.nextInt();
-input.nextLine();
-newApartment.setRent(x);
-
-logger.info( " Enter apartment Information : floor number :");
-logger.info( "\n");
-x = input.nextInt();
-input.nextLine();
-while(x>newHousing.getNumbersOfFloors()) {
-logger.info( "wrong input. there's no such floor in this housing : ");
-x = input.nextInt();
-input.nextLine();
-}
-newApartment.setFloorNum(x);
-
-logger.info( " Enter apartment Information : people capacity :");
-logger.info( "\n");
-x = input.nextInt();
-input.nextLine();
-newApartment.setPeopleCapacity(x);
-
-logger.info( " Enter apartment Information : number of rooms  :");
-logger.info( "\n");
-x = input.nextInt();
-input.nextLine();
-newApartment.setNumberOfRoom(x);
-
-logger.info( " Enter apartment Information : number of bathrooms :");
-logger.info( "\n");
-x = input.nextInt();
-input.nextLine();
-newApartment.setNumberOfBathrooms(x);
-
-logger.info( " Enter apartment Information : number of balconies :");
-logger.info( "\n");
-x = input.nextInt();
-input.nextLine();
-newApartment.setNumberOfBalconies(x);
-
-logger.info( " Enter any extra Information :");
-logger.info( "\n");
-s=input.nextLine();
-newApartment.setExtraInfo(s);
-
-logger.info( " Enter apartment Information : add pictures of this apartment :");
-logger.info( "\n");
-logger.info( " Enter number of pictures you want to add :");
-logger.info( "\n");
-x=input.nextInt();
-input.nextLine();
-for(int i=0; i<x; i++) {
-logger.info( " Enter the link :");
-s=input.nextLine();
-pics.add(s);
-logger.info( "\n");
-
-}
-newApartment.setPictures(pics);
-newApartment.setHousingID(housingID);
-newApartment.setAvailabe(true);
-newApartment.setCurrentNumberOfRoommates(0);
-apartmentsWaitingForApproval.add(newApartment);
-}
+	firstCaseOwnerHandle(name,housingsWaitingForApproval,apartmentsWaitingForApproval);
+	}
 
 else if (x == 2) { 
 List <Housing> returnedArray= new  ArrayList <Housing>();
@@ -629,38 +491,191 @@ logger.info( "\n");
 s=input.nextLine();
 obj.setPhoneNumber(s); }
 else {
-  logger.info( " you already entered a phone number, do you want to modify it? y/n");
-  logger.info( "\n"); 
-  s=input.nextLine();
-  while (!(s.equalsIgnoreCase("y")) && !(s.equalsIgnoreCase("n")) ) {
-	   logger.info( " wring input. enter y/n :");
-	   logger.info( "\n"); 
-	   s=input.nextLine();
-	  }
-  if(s.equalsIgnoreCase("y")) {
-	   logger.info( " Enter contact Information : your phone number :");
-	   logger.info( "\n"); 
-	   s=input.nextLine();
-	   obj.setPhoneNumber(s);
-	   logger.info( " phone number modified successfuly ");
-	   logger.info( "\n");
-	  
-	  }
-  else if(s.equalsIgnoreCase("n")){
-	  logger.info( "okay.");
-	  logger.info( "\n");
-  }
-  
-  
+	ownerHandleConfirmation(obj);
 }
 
 }
 else if(x==0) {
 logged=0;
 obj.setLogged(0);
-break;
-}
+break;}
 }	
+}
+public static void firstCaseOwnerHandle(String name, List<Housing> housingsWaitingForApproval ,List<Apartment> apartmentsWaitingForApproval) {
+	ArrayList <String> pics= new ArrayList<String>();
+	Housing newHousing=new Housing();
+	logger.info( " Enter Information of the new housing :\n ID:");
+	logger.info( "\n");
+	int housingID = input.nextInt();
+	input.nextLine();
+
+
+	while(Housing.doesExist(housingID, housingsArray)) {
+	logger.info( " this ID already exists Enter another one :\n ID:");
+	logger.info( "\n");
+	housingID = input.nextInt();
+	input.nextLine();
+
+	}
+	newHousing.setHousingID(housingID);
+
+
+	logger.info( " Enter housing Information : numbersOfFloors:");
+	logger.info( "\n");
+	x = input.nextInt();
+	input.nextLine();
+
+	newHousing.setNumbersOfFloors(x);
+
+	logger.info( " Enter housing Information : numbersOfApartmentInEachFloor:");
+	logger.info( "\n");
+	x = input.nextInt();
+	input.nextLine();
+
+	newHousing.setNumbersOfApartmentInEachFloor(x);
+	newHousing.setOwnerName(name);
+
+	logger.info( " Enter housing Information : location:");
+	logger.info( "\n");
+	s = input.nextLine();	
+
+	newHousing.setLocation(s);
+	logger.info("the new housing is: ");
+	if(newHousing != null) {
+	format=newHousing.toString();
+	logger.info(format);
+	}
+
+
+	logger.info("\n housings in thy system: ");
+	for(int i=0;i<housingsArray.size();i++) {
+	format=String.format("arr %d = %s",i, housingsArray.get(i).toString() );
+	if(format != null) {
+	logger.info(format);
+	}
+	}
+	housingsWaitingForApproval.add(newHousing);
+
+
+	Apartment newApartment=new Apartment();
+	logger.info( " Enter Information of the an apartment in this housing :\n ID:");
+	logger.info( "\n");
+	x = input.nextInt();
+	input.nextLine();
+	while(Apartment.doesExist(x, apartmentsArray,housingID)) {
+	logger.info( " this ID already exists enter another one :\n ID:");
+	logger.info( "\n");
+	x = input.nextInt();
+	input.nextLine();
+
+	}
+	newApartment.setApartmentID(x);
+	logger.info( " Enter apartment Information : available servieces:");
+	logger.info( "\n");
+	s = input.nextLine();
+	newApartment.setAvailableServices(s);
+
+	logger.info( " Enter apartment Information : apartment TYPE (Enter s or f):");
+	logger.info( "\n");
+	s = input.nextLine();
+	while(!(s.equalsIgnoreCase("s")) && !(s.equalsIgnoreCase("f")) ) {
+	logger.info( "wrong input. Enter f or s : ");
+	s = input.nextLine();
+	}
+	if(s.equalsIgnoreCase("s")) newApartment.setStudentHousing();
+	else newApartment.setFamilyHousing();
+
+
+	logger.info( " Enter apartment Information :  monthly rent:");
+	logger.info( "\n");
+	x = input.nextInt();
+	input.nextLine();
+	newApartment.setRent(x);
+
+	logger.info( " Enter apartment Information : floor number :");
+	logger.info( "\n");
+	x = input.nextInt();
+	input.nextLine();
+	while(x>newHousing.getNumbersOfFloors()) {
+	logger.info( "wrong input. there's no such floor in this housing : ");
+	x = input.nextInt();
+	input.nextLine();
+	}
+	newApartment.setFloorNum(x);
+
+	logger.info( " Enter apartment Information : people capacity :");
+	logger.info( "\n");
+	x = input.nextInt();
+	input.nextLine();
+	newApartment.setPeopleCapacity(x);
+
+	logger.info( " Enter apartment Information : number of rooms  :");
+	logger.info( "\n");
+	x = input.nextInt();
+	input.nextLine();
+	newApartment.setNumberOfRoom(x);
+
+	logger.info( " Enter apartment Information : number of bathrooms :");
+	logger.info( "\n");
+	x = input.nextInt();
+	input.nextLine();
+	newApartment.setNumberOfBathrooms(x);
+
+	logger.info( " Enter apartment Information : number of balconies :");
+	logger.info( "\n");
+	x = input.nextInt();
+	input.nextLine();
+	newApartment.setNumberOfBalconies(x);
+
+	logger.info( " Enter any extra Information :");
+	logger.info( "\n");
+	s=input.nextLine();
+	newApartment.setExtraInfo(s);
+
+	logger.info( " Enter apartment Information : add pictures of this apartment :");
+	logger.info( "\n");
+	logger.info( " Enter number of pictures you want to add :");
+	logger.info( "\n");
+	x=input.nextInt();
+	input.nextLine();
+	for(int i=0; i<x; i++) {
+	logger.info( " Enter the link :");
+	s=input.nextLine();
+	pics.add(s);
+	logger.info( "\n");
+
+	}
+	newApartment.setPictures(pics);
+	newApartment.setHousingID(housingID);
+	newApartment.setAvailabe(true);
+	newApartment.setCurrentNumberOfRoommates(0);
+	apartmentsWaitingForApproval.add(newApartment);
+
+}
+public static void ownerHandleConfirmation(User obj){
+	 logger.info( " you already entered a phone number, do you want to modify it? y/n");
+	  logger.info( "\n"); 
+	  s=input.nextLine();
+	  while (!(s.equalsIgnoreCase("y")) && !(s.equalsIgnoreCase("n")) ) {
+		   logger.info( " wring input. enter y/n :");
+		   logger.info( "\n"); 
+		   s=input.nextLine();
+		  }
+	  if(s.equalsIgnoreCase("y")) {
+		   logger.info( " Enter contact Information : your phone number :");
+		   logger.info( "\n"); 
+		   s=input.nextLine();
+		   obj.setPhoneNumber(s);
+		   logger.info( " phone number modified successfuly ");
+		   logger.info( "\n");
+		  
+		  }
+	  else if(s.equalsIgnoreCase("n")){
+		  logger.info( "okay.");
+		  logger.info( "\n");
+	  }
+	  
+	  
 }
 public static void main(String[] args) {
 	String name;
