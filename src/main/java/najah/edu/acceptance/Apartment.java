@@ -174,7 +174,7 @@ public static int getHouseID(Apartment apart) {
 }
 
 public static void printApartmentsOnFloor(List<Apartment> apartments,int floorNum, int housingiD) {
-	String format=String.format("%n apartments on floor %d : \n", floorNum);
+	String format=String.format("%n apartments on floor %d : %n", floorNum);
 	logger.info(format);
 	logger.info( "\n");
 	for(int i=0; i<apartments.size();i++) {
