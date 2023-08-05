@@ -95,8 +95,8 @@ public class MainFunc {
 
 	
 	
-	public static ArrayList <Housing> returnHousingsToSpecificOwner(List <Housing> housingsArray,String ownerName) {
-		ArrayList <Housing> ownerHousings =new ArrayList <Housing>(); 
+	public static List <Housing> returnHousingsToSpecificOwner(List <Housing> housingsArray,String ownerName) {
+		List <Housing> ownerHousings =new ArrayList <Housing>(); 
 		for(int i=0; i<housingsArray.size();i++) {
 			if(housingsArray.get(i).getOwnerName().equalsIgnoreCase(ownerName)) {
 				ownerHousings.add(housingsArray.get(i));
@@ -123,7 +123,7 @@ public class MainFunc {
 	
 	public static boolean checkEnteredFloorIfExists(List <Housing> housingsArray,int housingID, int floor ) {
 		int index=Housing.getIndexByHousingID(housingID, housingsArray);
-		return housingsArray.get(index).getNumbersOfFloors()< floor ;
+		return housingsArray.get(index).getNumbersOfFloors()> floor ;
 
 	}
 	

@@ -1,6 +1,7 @@
 package najah.edu.acceptance;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -61,11 +62,14 @@ public static void prepareInfo() {
 
 		User tenant3=new User("Hiba",pass,tenant,4,"0599344589");
 		Reservations reservation3=new Reservations(tenant3.getId(),apartment3.getApartmentID(),house2.getHousingID());
+		
 		User admin=new User("Haya",pass,"Admin",1);
+		
 		users.add(admin);
         users.add(owner1);
         users.add(tenant1);
         users.add(tenant2);
+        users.add(tenant3);
         users.add(ownerr);
         reservationsArray.add(reservation1);
         reservationsArray.add(reservation2);
@@ -111,8 +115,8 @@ public static void main(String[] args) {
 	User sentObj=new User();
 	Main.prepareInfo();
     Logger logger = LogManager.getLogger(Main.class);
-    ArrayList<Housing> housingsWaitingForApproval = new ArrayList<Housing>();
-    ArrayList<Apartment> apartmentsWaitingForApproval = new ArrayList<Apartment>();
+    List<Housing> housingsWaitingForApproval = new ArrayList<Housing>();
+    List<Apartment> apartmentsWaitingForApproval = new ArrayList<Apartment>();
     logger.info("\n");
 
     logger.info("|                   Welcome to  Sakankom                   |");
@@ -233,7 +237,8 @@ public static void main(String[] args) {
 					logger.info("This is how your Advertisement looks like");
 					
 					if(fur != null) {
-						logger.info(fur.toString());
+						format=fur.toString();
+						logger.info(format);
 					}
 					
 				}
@@ -299,7 +304,8 @@ if (x == 1) { /*add new housing*/
 	newHousing.setLocation(s);
 	logger.info("the new housing is: ");
 	if(newHousing != null) {
-		logger.info(newHousing.toString());
+		format=newHousing.toString();
+		logger.info(format);
 	}
 	
 	
@@ -408,8 +414,8 @@ if (x == 1) { /*add new housing*/
 	apartmentsWaitingForApproval.add(newApartment);
 	}
 
- else if (x == 2) { /*show owner control panel*/
-	 ArrayList <Housing> returnedArray= new  ArrayList <Housing>();
+ else if (x == 2) { 
+	    List <Housing> returnedArray= new  ArrayList <Housing>();
 	    logger.info( " here are your housings:");
 	    returnedArray=MainFunc.returnHousingsToSpecificOwner(housingsArray, name);
 		MainFunc.printHousingArray(returnedArray);
