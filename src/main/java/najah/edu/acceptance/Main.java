@@ -86,6 +86,7 @@ public static void main(String[] args) {
 	@SuppressWarnings("resource")
 	final String modifyString1="Modify Housing";
 	final String modifyString2="Modify Apartment";
+	 String format;
 
 	Scanner input = new Scanner(System.in);
 	String name;
@@ -137,7 +138,8 @@ public static void main(String[] args) {
 			logger.info(type);
 
 			logger.info("|______________________________________________________________________________________________________________________________|");
-			logger.info(String.format("Welcome Back %s", name));
+			String string=String.format("Welcome Back %s", name);
+			logger.info(string);
 		}
 		if(logged==1&&obj.getType().equalsIgnoreCase("tenant")) {
 			while(logged==1) {
@@ -230,7 +232,7 @@ public static void main(String[] args) {
 					furnitureArray.add(fur.toString());
 					logger.info("This is how your Advertisement looks like");
 					
-					if(fur.toString() != null) {
+					if(fur != null) {
 						logger.info(fur.toString());
 					}
 					
@@ -296,14 +298,14 @@ if (x == 1) { /*add new housing*/
 
 	newHousing.setLocation(s);
 	logger.info("the new housing is: ");
-	if(newHousing.toString() != null) {
+	if(newHousing != null) {
 		logger.info(newHousing.toString());
 	}
 	
 	
 	logger.info("\n housings in thy system: ");
 	for(int i=0;i<housingsArray.size();i++) {
-		String format=String.format("arr %d = %s",i, housingsArray.get(i).toString() );
+		format=String.format("arr %d = %s",i, housingsArray.get(i).toString() );
 		if(format != null) {
 		logger.info(format);
 		}
@@ -523,7 +525,8 @@ if (x == 1) { /*add new housing*/
 				  int index= Housing.getIndexByHousingID(x, housingsWaitingForApproval);
 				  housingsArray.add(housingsWaitingForApproval.get(index));
 				  apartmentsArray.add(apartmentsWaitingForApproval.get(index));
-				  logger.info( String.format("housing %d added successfuly with its apartment", x));
+				  format=String.format("housing %d added successfuly with its apartment", x);
+				  logger.info(format);
 
 				  logger.info( "\n");
 		         }
@@ -553,28 +556,33 @@ if (x == 1) { /*add new housing*/
 		    logger.info( "\n");
 		    x = input.nextInt();
 	        input.nextLine();
-	        
+
 	        if(x==1) {
-	        	 logger.info(String.format("%s %d : Enter the new owner name : ",modifyString1,housingID)  );
+	        	format=String.format("%s %d : Enter the new owner name : ",modifyString1,housingID) ;
+	        	 logger.info(format);
 				 logger.info( "\n");
 				 s=input.nextLine();
 				 MainFunc.modifyOwnerName(housingsArray, housingID, s);
 			}
 	        else if (x==2) {
-	        	 logger.info(String.format("%s %d : Enter the new location : ",modifyString1,housingID)  );
+	        	format=String.format("%s %d : Enter the new location : ",modifyString1,housingID);
+	        	 logger.info( format );
 				 logger.info( "\n");
 				 s=input.nextLine();
 				 MainFunc.modifyLocation(housingsArray, housingID, s);
 			}
 	        else if (x==3) {
-	        	 logger.info(String.format("%s %d : Enter the new numbersOfFloors : ",modifyString1,housingID)  );
+	        	format=String.format("%s %d : Enter the new numbersOfFloors : ",modifyString1,housingID);
+	        	 logger.info( format);
 				 logger.info( "\n");
 				 x=input.nextInt();
 				 input.nextLine();
 				 MainFunc.modifyNumOfFloors(housingsArray, housingID, x);
 	        }
 	        else if (x==4) {
-	        	 logger.info( "Modify apartment : Enter ID of an apartment in housing" +housingID+ " : ");
+	        	format=String.format("%s %d : Enter ID of an apartment in housing : ",modifyString1,housingID);
+
+	        	 logger.info(format);
 				 logger.info( "\n");
 				 int apartmentID = input.nextInt();
 		         input.nextLine();
@@ -595,33 +603,38 @@ if (x == 1) { /*add new housing*/
 			      x = input.nextInt();
 		          input.nextLine();
 		          if(x==1) { 
-			        	 logger.info(String.format("%s %d : Enter the new availableServices : ",modifyString2,apartmentID)  );
+		        	    format=String.format("%s %d : Enter the new availableServices : ",modifyString2,apartmentID);
+			        	 logger.info( format );
 			        	 logger.info( "\n");
 						 s=input.nextLine();
 						 MainFunc.modifyAvailableServices(apartmentsArray, chosenApartmentIndex, s);
 					}
 			        else if (x==2) {
-			        	 logger.info(String.format("%s %d : Enter the new rent : ",modifyString2,apartmentID)  );
+			        	format=String.format("%s %d : Enter the new rent : ",modifyString2,apartmentID);
+			        	 logger.info( format );
 						 logger.info( "\n");
 						 x=input.nextInt();
 						 input.nextLine();
 						 MainFunc.modifyRent(apartmentsArray, chosenApartmentIndex, x);
 					}
 			        else if (x==3) {
-			        	 logger.info(String.format("%s %d : Enter the new peopleCapacity : ",modifyString2,apartmentID)  );
+			        	format=String.format("%s %d : Enter the new peopleCapacity : ",modifyString2,apartmentID) ;
+			        	 logger.info(format);
 						 logger.info( "\n");
 						 x=input.nextInt();
 						 input.nextLine();
 						 MainFunc.modifyPeopleCapacity(apartmentsArray, chosenApartmentIndex, x);
 					}
 			        else if (x==4) {
-			        	 logger.info(String.format("%s %d : Enter extraInfo : ",modifyString2,apartmentID)  );
+			        	format=String.format("%s %d : Enter extraInfo : ",modifyString2,apartmentID) ;
+			        	 logger.info(format );
 						 logger.info( "\n");
 						 s=input.nextLine();
 						 MainFunc.modifyExtraInfo(apartmentsArray, chosenApartmentIndex, s);
 					}
 			        else if (x==5) {
-			        	 logger.info(String.format("%s %d : Enter new type(s / f) : ",modifyString2,apartmentID)  );
+			        	format=String.format("%s %d : Enter new type(s / f) : ",modifyString2,apartmentID);
+			        	 logger.info(format);
 						 logger.info( "\n");
 						 s=input.nextLine();
 						 while(!(s.equalsIgnoreCase("f")) && !(s.equalsIgnoreCase("s")) ) {
