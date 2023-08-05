@@ -174,16 +174,16 @@ public static int getHouseID(Apartment apart) {
 }
 
 public static void printApartmentsOnFloor(List<Apartment> apartments,int floorNum, int housingiD) {
-	String format=String.format("\n apartments on floor %d : \n", floorNum);
+	String format=String.format("%n apartments on floor %d : \n", floorNum);
 	logger.info(format);
 	logger.info( "\n");
 	for(int i=0; i<apartments.size();i++) {
-		if(apartments.get(i).getFloorNum()==floorNum && apartments.get(i).getHousingID()==housingiD) {
-			if(apartments.get(i) != null) {
+		if(apartments.get(i) != null&&apartments.get(i).getFloorNum()==floorNum && apartments.get(i).getHousingID()==housingiD) {
+			
 			format=apartments.get(i).toString();
 			logger.info(format);
 			logger.info( "\n");
-			}
+			
 			
 		}
 	}
@@ -192,7 +192,6 @@ public static void printApartmentsOnFloor(List<Apartment> apartments,int floorNu
 public static void printApartmentInfo(Apartment apartmentObj,List<Reservations> reservationObj,List<User>users ) {
 	int tenantID=-1;
 	String format1;
-	//String tenantInfo="info about the tenant and the apartment: \n ";
 	StringBuilder tenantInfo = new StringBuilder("info about the tenant and the apartment: \n");
 	for(int i=0; i< reservationObj.size();i++) {
 		if( (reservationObj.get(i).getApartmentID()==apartmentObj.getApartmentID()) && (reservationObj.get(i).getHousingID()== apartmentObj.getHousingID() ) ) {
@@ -209,7 +208,7 @@ public static void printApartmentInfo(Apartment apartmentObj,List<Reservations> 
 	}
 	
 	String tenantInfoString=tenantInfo.toString();
-	format1=String.format( "%s \n there are %d bathrooms and %d rooms and %d Balcony", tenantInfoString,
+	format1=String.format( "%s %n there are %d bathrooms and %d rooms and %d Balcony", tenantInfoString,
 		apartmentObj.numberOfBathrooms 
 		,apartmentObj.numberOfRoom, apartmentObj.numberOfBalconies);
 	logger.info(format1);

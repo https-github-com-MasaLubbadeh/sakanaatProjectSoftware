@@ -36,8 +36,9 @@ public class MainFunc {
 				logger.info( "in");
 
 				for(int j=0;j<housingsArray.size();j++) {
-					if(housingsArray.get(j).getHousingID() == apartmentsArray.get(i).getHousingID())
-						logger.info(housingsArray.get(j).toString());
+					 message=housingsArray.get(j).toString();
+					if(housingsArray.get(j).getHousingID()>0&&housingsArray.get(j).getHousingID() == apartmentsArray.get(i).getHousingID())
+						logger.info(message);
 
 				}
 				logger.info("\n");
@@ -102,7 +103,7 @@ public class MainFunc {
 						int apartID=apartmentsArray.get(j).getHousingID();
 						int price=apartmentsArray.get(j).getRent();
 						String service=apartmentsArray.get(j).getAvailableServices();
-						if(apartID!=-1 &&houseID == apartID) {
+						if(apartID!=-1 &&houseID == apartID&&price>0&&service!=null) {
 							
 								
 								message=(String.format("Apartment with this id %d  have these information", apartID));
@@ -111,15 +112,12 @@ public class MainFunc {
 								logger.info("pictures:");
 								printArrayList(apartmentsArray.get(j).getPictures());
 								
-								if(price>0&&service!=null) {
-									message=String.format("Price %d",price );
-									logger.info(message);
-									
-									message=String.format("Available Services: %s ", service);
-									logger.info(message);
-	
-								}
+								message=String.format("Price %d",price );
+								logger.info(message);
 								
+								message=String.format("Available Services: %s ", service);
+								logger.info(message);
+									
 								logger.info("\n");
 
 							}
@@ -206,8 +204,11 @@ public class MainFunc {
 		logger.info( "\n");
 	}
 	public static void printReservations(List <Reservations> reservationsArray) {
+		String message="";
 		for(int i=0; i<reservationsArray.size();i++) {
-			logger.info(reservationsArray.get(i).toString());
+			if(reservationsArray.get(i)!=null)
+			message=reservationsArray.get(i).toString();
+			logger.info(message);
 			logger.info("\n");
 		}
 	}
