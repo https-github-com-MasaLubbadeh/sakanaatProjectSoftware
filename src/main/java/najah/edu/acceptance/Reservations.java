@@ -1,6 +1,10 @@
 package najah.edu.acceptance;
 
 public class Reservations {
+	public Reservations() {
+		super();
+	}
+
 	int tenantID;
 	int apartmentID;
 	int housingID;

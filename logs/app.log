@@ -3328,3 +3328,82 @@
  -       4. To sell furniture  
  -       5. To view control panel  
  -       0. log out 
+ - 
+
+ - |                   Welcome to  Sakankom                   |
+ - 
+
+ - 
+ - |                   Enter you username                   |
+ - |_______________________________________________________________________________________________________________________________|
+ - |                   Enter you password                   |
+ - owner
+ - |______________________________________________________________________________________________________________________________|
+ - Welcome Back masaMasri
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  here are your housings:
+ - housing [housingID=2, ownerName=masaMasri, location=Nablus-beitWazan, numbersOfFloors=3, numbersOfApartmentInEachFloor=3]
+ - 
+
+ - Enter id of one of your housings to view its apartments:
+ - 
+
+ - 
+ number of tenants in this housing: 5
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - Enter floor number :
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=students, housingID=2, rent=400, floorNum=1, isAvailabe=false, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=students, housingID=2, rent=450, floorNum=1, isAvailabe=true, peopleCapacity=3, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - Enter apartment id :
+ - 
+
+ - info about the tenant and the apartment: 
+ 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -  you already entered a phone number, do you want to modify it? y/n
+ - 
+
+ - okay.
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
+ -    press 1. To add new residence 
+            2. To view control panel 
+            3. To add communication way 
+            0. log out   
+ - 
+
