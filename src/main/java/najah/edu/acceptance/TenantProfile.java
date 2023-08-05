@@ -10,6 +10,7 @@ public class TenantProfile {
 		this.owner=new User();
 		owner.setLogged(1);
 		rent=0;
+		type="Not Specified yet";
 }
 	public String getTenantName() {
 		return tenantName;
