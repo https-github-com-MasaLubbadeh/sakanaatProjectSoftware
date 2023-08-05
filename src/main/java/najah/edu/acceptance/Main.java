@@ -134,8 +134,8 @@ public static void tenantHandle(String name,User obj) {
 			furnitureArray.add(fur.toString());
 			logger.info("This is how your Advertisement looks like");
 			
+			format=fur.toString();
 			if(fur != null) {
-				format=fur.toString();
 				logger.info(format);
 			}
 			
@@ -154,33 +154,12 @@ public static void tenantHandle(String name,User obj) {
 	
 
 }
-
-private static void handleTenantBooking(String name,TenantProfile tenant) {
+private static void handlecomplexity(int x,int id,TenantProfile tenant	,String student,Apartment apart,Housing house) {
 	Reservations newReservation;
 	Housing tenantProfile=new Housing();
 	User sentObj=new User();
-	int id;
-	String student;
-	Apartment apart=new Apartment();
-	Housing house=new Housing();
-id=users.get(User.getIndex(name, users)).getId();					
-logger.info( "Are you a student? (yer or no) ");
-s=input.nextLine();
-s=input.nextLine();
-
-student=s;
-logger.info( "Enter on what building the apartment you want to book (id) ");
-x=input.nextInt();
-house.setHousingID(x);
-logger.info( "Enter on what apartment you want to book (id)");
-s=input.nextLine();
-x=input.nextInt();
-apart.setApartmentID(x);
-x=Apartment.getApartmentIndex(apart.getApartmentID(),house.getHousingID(),apartmentsArray);
-if(x<0) {
-	logger.info( "It appears that the house you requested is not in our system,make sure you have the right id and try again");
-
-}else {
+	
+	
 	if((apartmentsArray.get(x).isStudentHousing())&&student.equalsIgnoreCase("yes")) {
 		if(apartmentsArray.get(x).thereIsSpace()&&apartmentsArray.get(x).isAvailabe()) {
 			tenant.setType("Student");
@@ -218,6 +197,34 @@ if(x<0) {
 
 
 	}else logger.info( "Sorry, house is already booked");
+
+}
+private static void handleTenantBooking(String name,TenantProfile tenant) {
+	int id;
+	String student;
+
+	Apartment apart=new Apartment();
+	Housing house=new Housing();
+id=users.get(User.getIndex(name, users)).getId();					
+logger.info( "Are you a student? (yer or no) ");
+s=input.nextLine();
+s=input.nextLine();
+
+student=s;
+logger.info( "Enter on what building the apartment you want to book (id) ");
+x=input.nextInt();
+house.setHousingID(x);
+logger.info( "Enter on what apartment you want to book (id)");
+s=input.nextLine();
+x=input.nextInt();
+apart.setApartmentID(x);
+x=Apartment.getApartmentIndex(apart.getApartmentID(),house.getHousingID(),apartmentsArray);
+if(x<0) {
+	logger.info( "It appears that the house you requested is not in our system,make sure you have the right id and try again");
+
+}else {
+	handlecomplexity(x,id,tenant,student,apart,house);	
+	
 }
 
 
