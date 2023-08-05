@@ -153,8 +153,9 @@ public static void tenantHandle(String name,User obj) {
 	
 
 }
-private static void bookStudentHousing(int id,TenantProfile tenant,Apartment apart,Housing house,User sentObj,Reservations newReservation,Housing tenantProfile) {
+private static void bookStudentHousing(int id,TenantProfile tenant,Apartment apart,Housing house,User sentObj,Housing tenantProfile) {
 	if(apartmentsArray.get(x).thereIsSpace()&&apartmentsArray.get(x).isAvailabe()) {
+		Reservations newReservation;
 		tenant.setType("Student");
 		tenantProfile.setOwnerName(housingsArray.get(Housing.getIndex(house.getHousingID(), housingsArray)).getOwnerName());
 		sentObj.setName(tenantProfile.getOwnerName());
@@ -175,9 +176,8 @@ private static void handlecomplexity(int x,int id,TenantProfile tenant	,String s
 	Housing tenantProfile=new Housing();
 	User sentObj=new User();
 	
-	
 	if((apartmentsArray.get(x).isStudentHousing())&&student.equalsIgnoreCase("yes")) {
-		bookStudentHousing(id,tenant,apart,house,sentObj,newReservation,tenantProfile);
+		bookStudentHousing(id,tenant,apart,house,sentObj,tenantProfile);
 				
 	}
 	else if((apartmentsArray.get(x).isStudentHousing())&&student.equalsIgnoreCase("no")) {
@@ -251,57 +251,10 @@ public static void adminHandle( List<Housing> housingsWaitingForApproval,List<Ap
  x = input.nextInt();
  input.nextLine();
  if(x==1) {
-	 MainFunc.printWaitingList(housingsWaitingForApproval, apartmentsWaitingForApproval);
-	 if(!housingsWaitingForApproval.isEmpty()) {
-			 insideWhileAdmin( housingsWaitingForApproval ,apartmentsWaitingForApproval);
-	 }    
+	 adminHandleCase1(housingsWaitingForApproval ,apartmentsWaitingForApproval);
  } 
- else if(x==2) { 
-	 logger.info( "Modify Housing : Enter ID of the housing : ");
-	 logger.info( "\n");
-	int housingID = input.nextInt();
-     input.nextLine();
-    while(! Housing.doesExist(housingID, housingsArray)) {
-    	 logger.info( "wrong input.No such housing exist \n Enter ID of existing housing :  ");
-		 logger.info( "\n");
-		 housingID = input.nextInt();
-         input.nextLine();
-    }
-    logger.info( "   press 1. to modify housing owner name \n     "
-            + "         2.  modify housing location \n     "
-            + "         3.  modify housing numbersOfFloors \n     "
-            + "         4.  modify an apartmentin this housing \n     "
-            );
-    logger.info( "\n");
-    x = input.nextInt();
-    input.nextLine();
-
-    if(x==1) {
-    	format=String.format("%s %d : Enter the new owner name : ",modifyString1,housingID) ;
-    	 logger.info(format);
-		 logger.info( "\n");
-		 s=input.nextLine();
-		 MainFunc.modifyOwnerName(housingsArray, housingID, s);
-	}
-    else if (x==2) {
-    	format=String.format("%s %d : Enter the new location : ",modifyString1,housingID);
-    	 logger.info( format );
-		 logger.info( "\n");
-		 s=input.nextLine();
-		 MainFunc.modifyLocation(housingsArray, housingID, s);
-	}
-    else if (x==3) {
-    	format=String.format("%s %d : Enter the new numbersOfFloors : ",modifyString1,housingID);
-    	 logger.info( format);
-		 logger.info( "\n");
-		 x=input.nextInt();
-		 input.nextLine();
-		 MainFunc.modifyNumOfFloors(housingsArray, housingID, x);
-    }
-    else if (x==4) {
-    	adminHandleApartModify( modifyString1,  modifyString2, housingID  );
-    }
-	 
+ else if(x==2) {
+	 adminHandleCase2(modifyString1, modifyString2);
  }
  else if(x==3) {
 	 MainFunc.printReservations(reservationsArray);
@@ -343,6 +296,62 @@ public static void insideWhileAdmin(List<Housing> housingsWaitingForApproval ,Li
 			 logger.info( "\n");
          }
 	 }
+	
+}
+public static void adminHandleCase1(List<Housing> housingsWaitingForApproval ,List<Apartment> apartmentsWaitingForApproval) {
+	MainFunc.printWaitingList(housingsWaitingForApproval, apartmentsWaitingForApproval);
+	 if(!housingsWaitingForApproval.isEmpty()) {
+			 insideWhileAdmin( housingsWaitingForApproval ,apartmentsWaitingForApproval);
+	 }  
+}
+public static void adminHandleCase2(String modifyString1, String modifyString2) {
+	 
+	 logger.info( "Modify Housing : Enter ID of the housing : ");
+	 logger.info( "\n");
+	int housingID = input.nextInt();
+    input.nextLine();
+   while(! Housing.doesExist(housingID, housingsArray)) {
+   	 logger.info( "wrong input.No such housing exist \n Enter ID of existing housing :  ");
+		 logger.info( "\n");
+		 housingID = input.nextInt();
+        input.nextLine();
+   }
+   logger.info( "   press 1. to modify housing owner name \n     "
+           + "         2.  modify housing location \n     "
+           + "         3.  modify housing numbersOfFloors \n     "
+           + "         4.  modify an apartmentin this housing \n     "
+           );
+   logger.info( "\n");
+   x = input.nextInt();
+   input.nextLine();
+
+   if(x==1) {
+   	format=String.format("%s %d : Enter the new owner name : ",modifyString1,housingID) ;
+   	 logger.info(format);
+		 logger.info( "\n");
+		 s=input.nextLine();
+		 MainFunc.modifyOwnerName(housingsArray, housingID, s);
+	}
+   else if (x==2) {
+   	format=String.format("%s %d : Enter the new location : ",modifyString1,housingID);
+   	 logger.info( format );
+		 logger.info( "\n");
+		 s=input.nextLine();
+		 MainFunc.modifyLocation(housingsArray, housingID, s);
+	}
+   else if (x==3) {
+   	format=String.format("%s %d : Enter the new numbersOfFloors : ",modifyString1,housingID);
+   	 logger.info( format);
+		 logger.info( "\n");
+		 x=input.nextInt();
+		 input.nextLine();
+		 MainFunc.modifyNumOfFloors(housingsArray, housingID, x);
+   }
+   else if (x==4) {
+   	adminHandleApartModify( modifyString1,  modifyString2, housingID  );
+   }
+	 
+
 	
 }
 public static void adminHandleApartModify(String modifyString1, String modifyString2,int housingID  ) {
@@ -417,6 +426,7 @@ public static void adminHandleApartModify(String modifyString1, String modifyStr
 
 	
 }
+
 public static void ownerHandle(List<Housing> housingsWaitingForApproval ,List<Apartment> apartmentsWaitingForApproval,User obj,String name) {
 	int logged=1;
 while(logged==1) {
@@ -433,67 +443,11 @@ if (x == 1) { /*add new housing*/
 	firstCaseOwnerHandle(name,housingsWaitingForApproval,apartmentsWaitingForApproval);
 	}
 
-else if (x == 2) { 
-List <Housing> returnedArray= new  ArrayList <Housing>();
-logger.info( " here are your housings:");
-returnedArray=MainFunc.returnHousingsToSpecificOwner(housingsArray, name);
-MainFunc.printHousingArray(returnedArray);
-logger.info( "Enter id of one of your housings to view its apartments:");
-logger.info( "\n");
-
-int chosenHousingID=input.nextInt();
-input.nextLine();
-while( !(MainFunc.checkEnteredHousingID(returnedArray, chosenHousingID)) ) {
-   logger.info( "wrong input. Enter ID of one of your housings shown above :");
-   logger.info( "\n");
-   chosenHousingID=input.nextInt();
-   input.nextLine();
-}
-
-Housing.printTenantsCount(apartmentsArray,housingsArray,name);
-Housing.printNumberOfFloors(housingsArray, chosenHousingID);
-
-logger.info( "Enter floor number :");
-logger.info( "\n");
-
-int floorNum=input.nextInt();
-input.nextLine();
-
-while( !(MainFunc.checkEnteredFloorIfExists(returnedArray, chosenHousingID,floorNum)) ) {
-	   logger.info( "wrong input. Enter floor that exists :");
-	   logger.info( "\n");
-	   floorNum=input.nextInt();
-	   input.nextLine();
-   }
-
-Apartment.printApartmentsOnFloor(apartmentsArray,floorNum,chosenHousingID);
-
-logger.info( "Enter apartment id :");
-logger.info( "\n");
-x=input.nextInt();
-input.nextLine();
-while(!(Apartment.doesExist(x, apartmentsArray, chosenHousingID))) {
-	logger.info( "wrong input. Enter apartment id that exists :");
-    logger.info( "\n"); 
-    x=input.nextInt();
-	input.nextLine();
-    } 
-    int chosenApartmentIndex=Apartment.getIndexByApartmentID(x,chosenHousingID, apartmentsArray);
-    Apartment.printApartmentInfo(apartmentsArray.get(chosenApartmentIndex), reservationsArray,users);
-
-
-
+else if (x == 2) {
+	secondCaseOwnerHandle(name);
 }
 else if (x == 3) {
-if( obj.getPhoneNumber() ==null ){
-logger.info( " Enter contact Information : your phone number :");
-logger.info( "\n"); 
-s=input.nextLine();
-obj.setPhoneNumber(s); }
-else {
-	ownerHandleConfirmation(obj);
-}
-
+	thirdCaseOwnerHandle(obj);
 }
 else if(x==0) {
 logged=0;
@@ -651,6 +605,73 @@ public static void firstCaseOwnerHandle(String name, List<Housing> housingsWaiti
 	newApartment.setCurrentNumberOfRoommates(0);
 	apartmentsWaitingForApproval.add(newApartment);
 
+}
+public static void secondCaseOwnerHandle(String name) {
+	 
+	List <Housing> returnedArray= new  ArrayList <Housing>();
+	logger.info( " here are your housings:");
+	returnedArray=MainFunc.returnHousingsToSpecificOwner(housingsArray, name);
+	MainFunc.printHousingArray(returnedArray);
+	logger.info( "Enter id of one of your housings to view its apartments:");
+	logger.info( "\n");
+
+	int chosenHousingID=input.nextInt();
+	input.nextLine();
+	while( !(MainFunc.checkEnteredHousingID(returnedArray, chosenHousingID)) ) {
+	   logger.info( "wrong input. Enter ID of one of your housings shown above :");
+	   logger.info( "\n");
+	   chosenHousingID=input.nextInt();
+	   input.nextLine();
+	}
+
+	Housing.printTenantsCount(apartmentsArray,housingsArray,name);
+	Housing.printNumberOfFloors(housingsArray, chosenHousingID);
+
+	logger.info( "Enter floor number :");
+	logger.info( "\n");
+
+	int floorNum=input.nextInt();
+	input.nextLine();
+
+	while( !(MainFunc.checkEnteredFloorIfExists(returnedArray, chosenHousingID,floorNum)) ) {
+		   logger.info( "wrong input. Enter floor that exists :");
+		   logger.info( "\n");
+		   floorNum=input.nextInt();
+		   input.nextLine();
+	   }
+
+	Apartment.printApartmentsOnFloor(apartmentsArray,floorNum,chosenHousingID);
+
+	logger.info( "Enter apartment id :");
+	logger.info( "\n");
+	x=input.nextInt();
+	input.nextLine();
+	while(!(Apartment.doesExist(x, apartmentsArray, chosenHousingID))) {
+		logger.info( "wrong input. Enter apartment id that exists :");
+	    logger.info( "\n"); 
+	    x=input.nextInt();
+		input.nextLine();
+	    } 
+	    int chosenApartmentIndex=Apartment.getIndexByApartmentID(x,chosenHousingID, apartmentsArray);
+	    Apartment.printApartmentInfo(apartmentsArray.get(chosenApartmentIndex), reservationsArray,users);
+
+
+
+
+}
+public static void thirdCaseOwnerHandle(User obj) {
+
+if( obj.getPhoneNumber() ==null ){
+logger.info( " Enter contact Information : your phone number :");
+logger.info( "\n"); 
+s=input.nextLine();
+obj.setPhoneNumber(s); }
+else {
+	ownerHandleConfirmation(obj);
+}
+
+
+	
 }
 public static void ownerHandleConfirmation(User obj){
 	 logger.info( " you already entered a phone number, do you want to modify it? y/n");
