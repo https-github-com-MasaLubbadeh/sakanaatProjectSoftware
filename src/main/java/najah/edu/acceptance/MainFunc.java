@@ -8,6 +8,10 @@ import org.apache.logging.log4j.Logger;
 
 public class MainFunc {
 
+	public MainFunc() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	static Logger logger = LogManager.getLogger(MainFunc.class);
 	static final  String ST="updated successfuly";
 	
@@ -27,12 +31,14 @@ public class MainFunc {
 	}
 	public static void tenantView(List <Apartment>apartmentsArray , List <Housing>housingsArray) {
 		for(int i = 0; i < apartmentsArray.size(); i++) { 
-			if(apartmentsArray.get(i).isAvailabe()) {
-				logger.info(apartmentsArray.get(i).toString());
+			if(apartmentsArray.get(i).isAvailabe()&&apartmentsArray.get(i)!=null) {
+				String message=apartmentsArray.get(i).toString();
+				logger.info(message);
 				logger.info( "in");
 
 				for(int j=0;j<housingsArray.size();j++) {
-						logger.info(housingsArray.get(j).toString(),housingsArray.get(j).getHousingID() == apartmentsArray.get(i).getHousingID());
+					if(housingsArray.get(j).getHousingID() == apartmentsArray.get(i).getHousingID())
+						logger.info(housingsArray.get(j).toString());
 
 				}
 				logger.info("\n");
@@ -51,37 +57,78 @@ public class MainFunc {
 	public static void printControlPanel(TenantProfile obj) {
 		logger.info("|______________________________________________________________________________________________________________________________|");
 		String tenantName = obj.getTenantName();
-		if (tenantName != null) {
-		    String message = String.format("Hello %s. Welcome Back", tenantName);
+		String phoneNumber=obj.getPhoneNumber();
+		String status=obj.getType();
+		String OwnerName=obj.getOwner().getName();
+		String OphoneNumber=obj.getOwner().getPhoneNumber();
+		int rent=obj.getRent();
+		String message="";
+		if (tenantName != null &&phoneNumber!=null&&status!=null&&OwnerName!=null&&OphoneNumber!=null&&rent!=-1) {
+			
+		    message = String.format("Hello %s. Welcome Back", tenantName);
 		    logger.info(message);
+		    
+		    message = String.format("Name: %s                   PhoneNumber: %s",tenantName,obj.getPhoneNumber());
+			logger.info(message);
+
+			logger.info("");
+			
+			message=String.format("Status: %s", status);
+			logger.info(message);
+			
+			logger.info("|______________________________________________________________________________________________________________________________|");
+						
+			logger.info("                  Owner information            ");
+			
+			message=String.format("Owner Name: %s                   PhoneNumber: %s",OwnerName,OphoneNumber);
+			logger.info(message);
+			
+			message=String.format("Rent: %d",rent );
+			logger.info(message);
+			
+		    
 		}
 
-
-		logger.info(String.format("Name: %s                   PhoneNumber: %s",obj.getTenantName(),obj.getPhoneNumber()));
-		logger.info("");
-		logger.info(String.format("Status: %s", obj.getType()));
-		logger.info("|______________________________________________________________________________________________________________________________|");
-		logger.info("                  Owner information            ");
-		logger.info(String.format("Owner Name: %s                   PhoneNumber: %s",obj.getOwner().getName(),obj.getOwner().getPhoneNumber()));
-		logger.info(String.format("Rent: %s", obj.getRent()));
-		
+	
 	}
 	public static void printDetails(List <Apartment>apartmentsArray , List <Housing>housingsArray) {
-		for(int i = 0; i < housingsArray.size(); i++) { 
+		for(int i = 0; i < housingsArray.size(); i++) {
+			int houseID=housingsArray.get(i).getHousingID();
+			String Location=housingsArray.get(i).getLocation();
+			String message="";
+				if(houseID!=-1&&Location!=null) {
+					message=String.format("Housing with id %d  is on this location %s  and have these apartments:",houseID,Location);
+					logger.info(message);
+					for(int j=0;j<apartmentsArray.size();j++) {
+						int apartID=apartmentsArray.get(j).getHousingID();
+						int price=apartmentsArray.get(j).getRent();
+						String service=apartmentsArray.get(j).getAvailableServices();
+						if(apartID!=-1) {
+							if(houseID == apartID) {
+								
+								message=(String.format("Apartment with this id %d  have these information", apartID));
+								logger.info(message);
+								
+								logger.info("pictures:");
+								printArrayList(apartmentsArray.get(j).getPictures());
+								
+								if(price>0&&service!=null) {
+									message=String.format("Price %d",price );
+									logger.info(message);
+									
+									message=String.format("Available Services: %s ", service);
+									logger.info(message);
 	
-				logger.info(String.format("Housing with id %s  is on this location %s  and have these apartments:", housingsArray.get(i).getHousingID(),housingsArray.get(i).getLocation()));
-				for(int j=0;j<apartmentsArray.size();j++) {
-					if(housingsArray.get(i).getHousingID() == apartmentsArray.get(j).getHousingID()) {
-						logger.info(String.format("Apartment with this id %s  have these information", apartmentsArray.get(j).getApartmentID()));
-						logger.info("pictures:");
-						printArrayList(apartmentsArray.get(j).getPictures());
-						logger.info(String.format("Price %s", apartmentsArray.get(j).getRent()));
-						logger.info(String.format("Available Services: %s ", apartmentsArray.get(j).getAvailableServices()));
+								}
+								
+								logger.info("\n");
 
-						logger.info("\n");
-
+							}
+						}
+						
 					}
 				}
+			
 
 
 		} 
@@ -106,8 +153,11 @@ public class MainFunc {
 	}
 	public static void printHousingArray(List <Housing> housingsArray) {
 		for(int i=0; i<housingsArray.size();i++) {
+			if(housingsArray.get(i)!=null) {
 				logger.info( housingsArray.get(i).toString());
 				logger.info( "\n");
+			}
+				
 			}
 	}
 	
@@ -168,12 +218,16 @@ public class MainFunc {
 	
 	public static void printWaitingList(List <Housing> housingsArray,List <Apartment> apartmentsArray) {
 		 for(int i=0;i<housingsArray.size();i++) {
-			 logger.info( "here are the housings(with apartment) in the waithing List : ");
-			 logger.info( housingsArray.get(i).toString());
-			 logger.info( "\n");
-			logger.info(String.format("with this apartment : %s", apartmentsArray.get(i).toString()));
+			 if(housingsArray.get(i)!=null&&apartmentsArray.get(i)!=null) {
+				 logger.info( "here are the housings(with apartment) in the waithing List : ");
+				 logger.info( housingsArray.get(i).toString());
+				 logger.info( "\n");
+				 logger.info("with this apartment : ");
+				 logger.info(apartmentsArray.get(i).toString());
 
-			 logger.info( "\n");
+				 logger.info( "\n");
+				 
+			 }
 			
 		 }
 		 if(housingsArray.isEmpty()) {
