@@ -21,18 +21,36 @@ public class AddNewHousingTest {
 	Housing housingObj;
 	Housing updateData;
 	// housing housingNew;
+
 	boolean actual = false;
 	boolean expected = false;
 
 	HousingService underTest = spy(HousingService.class);
 
 	ArrayList<Housing> housingArray = new ArrayList<Housing>();
+	ArrayList<Apartment> apartmentsArray = new ArrayList<Apartment>();
 
 	@Before
 	public void prepareInfo() {
 
 		Housing house1 = new Housing(1, "jafarHindi", "Nablus-Rafedia", 3, 3);
 		Housing house2 = new Housing(2, "masaMasri", "Nablus-beitWazan", 3, 3);
+		Apartment aprt=new Apartment();
+		aprt.setApartmentID(1);
+		aprt.setAvailableServices("air conditioning");
+		aprt.setCurrentNumberOfRoommates(0);
+		aprt.setAvailabe(true);
+		aprt.setRent(150);
+		aprt.setExtraInfo("no");
+		aprt.setFamilyHousing();
+		aprt.setHousingID(1);
+		aprt.setType("no idea");
+		aprt.setFloorNum(1);
+		apartmentsArray.add(aprt);
+		boolean test= aprt.doesExist(1, apartmentsArray, 1);
+		aprt.getRent();
+		aprt.getAvailableServices();
+		
 		// housing house3= new housing(8,"raya","Nablus-jericho",4,2);
 		housingArray.add(house1);
 		housingArray.add(house2);
@@ -117,7 +135,7 @@ public class AddNewHousingTest {
 		housingObj.setLocation(string2);
 		housingObj.setNumbersOfApartmentInEachFloor(int2);
 		housingObj.setNumbersOfFloors(int3);
-
+		housingObj.getNumbersOfFloors();
 	}
 
 	@Then("housing with id {string} added succesfully")

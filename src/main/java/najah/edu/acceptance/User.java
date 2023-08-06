@@ -32,32 +32,7 @@ private String major;
 		this.id = id;
 		this.phoneNumber = phoneNumber;
 	}
-	public User(String name, String pass, String type, int id, String phoneNumber,String major,int age) {
-		super();
-		this.name = name;
-		this.pass = pass;
-		this.type = type;
-		this.id = id;
-		this.phoneNumber = phoneNumber;
-		this.age=age;
-		this.major=major;
-	}
 	
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public String getMajor() {
-		return major;
-	}
-
-	public void setMajor(String major) {
-		this.major = major;
-	}
 	 public int getId() {
 			return id;
 		}
