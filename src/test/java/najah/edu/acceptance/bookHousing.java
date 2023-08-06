@@ -111,6 +111,7 @@ public void theTenantWithIdWantsToBookAFamilyApartmentInHousingIdFloorApartmentI
     	reservationsArray.add(newReservation);
     	apartmantsArray.get(apartmentIndex).setAvailabe(false);
     	assertEquals(expected,actual1);  	
+    	newReservation.toString();
    }
 
 /// 

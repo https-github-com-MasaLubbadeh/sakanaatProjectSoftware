@@ -204,7 +204,7 @@ private static void handlecomplexity(int x,int id,TenantProfile tenant	,String s
 }
 private static void handleTenantBooking(String name,TenantProfile tenant) {
 	int id;
-	String student;
+	String student; 
 
 	Apartment apart=new Apartment();
 	Housing house=new Housing();
