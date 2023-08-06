@@ -46,9 +46,7 @@ public class Housing {
 	public void setNumbersOfFloors(int numbersOfFloors) {
 		this.numbersOfFloors = numbersOfFloors;
 	}
-	public int getNumbersOfApartmentInEachFloor() {
-		return numbersOfApartmentInEachFloor;
-	}
+
 	public void setNumbersOfApartmentInEachFloor(int numbersOfApartmentInEachFloor) {
 		this.numbersOfApartmentInEachFloor = numbersOfApartmentInEachFloor;
 	}

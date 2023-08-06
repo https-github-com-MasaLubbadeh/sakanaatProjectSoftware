@@ -65,6 +65,9 @@ public class LoginFeatureSteps {
 	@When("password is false {string}")
 	public void passwordIsFalse(String pass) {
 		prepareinfo();
+		obj.setPass(pass);
+		obj.setType("not necesssary");
+		obj.setPhoneNumber("not specified");
 		actual=users.get(User.getIndex(obj.getName(), users)).getPass().equals(pass);
 		
 	}

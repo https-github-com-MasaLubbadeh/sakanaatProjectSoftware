@@ -3705,3 +3705,237 @@
  -       4. To sell furniture  
  -       5. To view control panel  
  -       0. log out 
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+
+ name: Raya
+ phone number: 0564879532 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+
+ name: Raya
+ phone number: 0564879532 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+
+ name: Raya
+ phone number: 0564879532 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+
+ name: Raya
+ phone number: 0564879532 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+
+ name: Raya
+ phone number: 0564879532 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+
+ name: Raya
+ phone number: 0564879532 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+
+ name: Raya
+ phone number: 0564879532 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+
+ name: Raya
+ phone number: 0564879532 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
+ - 
+ number of Floors: 3
+ - 
+
+ - 
+ number of tenants in this housing: 1
+ - 
+
+ - 
+ apartments on floor 1 : 
+
+ - 
+
+ - apartment [apartmentID=1, availableServices=air-conditioning, type=family, housingID=1, rent=550, floorNum=1, isAvailabe=false, peopleCapacity=7, numberOfBathrooms=0, numberOfRoom=0, numberOfBalconies=0]
+ - 
+
+ - apartment [apartmentID=2, availableServices=air-conditioning, type=family, housingID=1, rent=600, floorNum=1, isAvailabe=true, peopleCapacity=5, numberOfBathrooms=2, numberOfRoom=3, numberOfBalconies=2]
+ - 
+
+ - info about the tenant and the apartment: 
+
+ name: Raya
+ phone number: 0564879532 
+ there are 0 bathrooms and 0 rooms and 0 Balcony
+ - 
+
