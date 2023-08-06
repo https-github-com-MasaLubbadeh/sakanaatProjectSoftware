@@ -35,6 +35,9 @@ public class AddNewHousingTest {
 
 		Housing house1 = new Housing(1, "jafarHindi", "Nablus-Rafedia", 3, 3);
 		Housing house2 = new Housing(2, "masaMasri", "Nablus-beitWazan", 3, 3);
+		Housing house3 = new Housing(2, "masaMasri", "Nablus-beitWazan", 0, 0);
+		house3.setNumbersOfApartmentInEachFloor(3);
+		house3.setNumbersOfFloors(2);
 		Apartment aprt=new Apartment();
 		aprt.setApartmentID(1);
 		aprt.setAvailableServices("air conditioning");
